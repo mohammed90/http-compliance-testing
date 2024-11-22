@@ -1,0 +1,277 @@
+- section-4.2.3-7: 
+   Two HTTP URIs that are equivalent after normalization (using any method)
+   can be assumed to identify the same resource, and any HTTP component <bcp14>MAY</bcp14>
+   perform normalization. As a result, distinct resources <bcp14>SHOULD NOT</bcp14> be
+   identified by HTTP URIs that are equivalent after normalization (using any
+   method defined in <xref target="URI" section="6.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc3986#section-6.2" derivedContent="URI"/>).
+
+- section-5.6.3-2: 
+   The OWS rule is used where zero or more linear whitespace octets might
+   appear. For protocol elements where optional whitespace is preferred to
+   improve readability, a sender <bcp14>SHOULD</bcp14> generate the optional whitespace
+   as a single SP; otherwise, a sender <bcp14>SHOULD NOT</bcp14> generate optional
+   whitespace except as needed to overwrite invalid or unwanted protocol
+   elements during in-place message filtering.
+
+- section-5.6.4-5: 
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a quoted-string except
+   where necessary to quote DQUOTE and backslash octets occurring within that
+   string.
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a comment except
+   where necessary to quote parentheses ["(" and ")"] and backslash octets
+   occurring within that comment.
+
+- section-5.6.4-5: 
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a quoted-string except
+   where necessary to quote DQUOTE and backslash octets occurring within that
+   string.
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a comment except
+   where necessary to quote parentheses ["(" and ")"] and backslash octets
+   occurring within that comment.
+
+- section-6.5.1-5: 
+   Because of the potential for trailer fields to be discarded in transit, a
+   server <bcp14>SHOULD NOT</bcp14> generate trailer fields that it believes are necessary
+   for the user agent to receive.
+
+- section-7.6.3-10: 
+   An intermediary used as a portal through a network firewall
+   <bcp14>SHOULD NOT</bcp14> forward the names and ports of hosts within the firewall
+   region unless it is explicitly enabled to do so. If not enabled, such an
+   intermediary <bcp14>SHOULD</bcp14> replace each received-by host of any host behind the
+   firewall by an appropriate pseudonym for that host.
+
+- section-7.6.3-15: 
+   A sender <bcp14>SHOULD NOT</bcp14> combine multiple list members unless they are all
+   under the same organizational control and the hosts have already been
+   replaced by pseudonyms. A sender <bcp14>MUST NOT</bcp14> combine members that
+   have different received-protocol values.
+
+- section-7.7-7: 
+   A proxy <bcp14>SHOULD NOT</bcp14> modify header fields that provide information about
+   the endpoints of the communication chain, the resource state, or the
+   <xref target="selected.representation" format="none" sectionFormat="of" derivedContent="">selected representation</xref> (other than the content) unless the field's
+   definition specifically allows such modification or the modification is
+   deemed necessary for privacy or security.
+
+- section-8.4-5: 
+   If one or more encodings have been applied to a representation, the sender
+   that applied the encodings <bcp14>MUST</bcp14> generate a Content-Encoding header field
+   that lists the content codings in the order in which they were applied.
+   Note that the coding named "identity" is reserved for its special role
+   in <xref target="field.accept-encoding" format="none" sectionFormat="of" derivedContent="">Accept-Encoding</xref> and thus <bcp14>SHOULD NOT</bcp14> be included.
+
+- section-8.6-5: 
+   A user agent <bcp14>SHOULD</bcp14> send Content-Length in a request when the method
+   defines a meaning for enclosed content and it is not sending
+   Transfer-Encoding.
+   For example, a user agent normally sends Content-Length in a POST request
+   even when the value is 0 (indicating empty content).
+   A user agent <bcp14>SHOULD NOT</bcp14> send a
+   Content-Length header field when the request message does not contain
+   content and the method semantics do not anticipate such data.
+
+- section-9.2.2-4: 
+   A client <bcp14>SHOULD NOT</bcp14> automatically retry a request with a non-idempotent
+   method unless it has some means to know that the request semantics are
+   actually idempotent, regardless of the method, or some means to detect that
+   the original request was never applied.
+
+- section-9.2.2-7: 
+   A proxy <bcp14>MUST NOT</bcp14> automatically retry non-idempotent requests.
+   A client <bcp14>SHOULD NOT</bcp14> automatically retry a failed automatic retry.
+
+- section-9.3.1-6: 
+   Although request message framing is independent of the method used,
+   content received in a GET request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a GET request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-9.3.1-6: 
+   Although request message framing is independent of the method used,
+   content received in a GET request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a GET request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-9.3.2-3: 
+   Although request message framing is independent of the method used,
+   content received in a HEAD request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a HEAD request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-9.3.2-3: 
+   Although request message framing is independent of the method used,
+   content received in a HEAD request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a HEAD request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-9.3.5-6: 
+   Although request message framing is independent of the method used,
+   content received in a DELETE request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a DELETE request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-9.3.5-6: 
+   Although request message framing is independent of the method used,
+   content received in a DELETE request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a DELETE request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+
+- section-10.1.2-5: 
+   The From header field is rarely sent by non-robotic user agents.
+   A user agent <bcp14>SHOULD NOT</bcp14> send a From header field without explicit
+   configuration by the user, since that might conflict with the user's
+   privacy interests or their site's security policy.
+
+- section-10.1.2-7: 
+   A server <bcp14>SHOULD NOT</bcp14> use the From header field for access control or
+   authentication, since its value is expected to be visible to anyone
+   receiving or observing the request and is often recorded within logfiles
+   and error reports without any expectation of privacy.
+
+- section-10.1.3-9: 
+   The Referer header field has the potential to reveal information about the request
+   context or browsing history of the user, which is a privacy concern if the
+   referring resource's identifier reveals personal information (such as an
+   account name) or a resource that is supposed to be confidential (such as
+   behind a firewall or internal to a secured service). Most general-purpose
+   user agents do not send the Referer header field when the referring
+   resource is a local "file" or "data" URI. A user agent <bcp14>SHOULD NOT</bcp14> send a
+   <xref target="field.referer" format="none" sectionFormat="of" derivedContent="">Referer</xref> header field if the referring resource was accessed with
+   a secure protocol and the request target has an origin differing from that
+   of the referring resource, unless the referring resource explicitly allows
+   Referer to be sent. A user agent <bcp14>MUST NOT</bcp14> send a
+   <xref target="field.referer" format="none" sectionFormat="of" derivedContent="">Referer</xref> header field in an unsecured HTTP request if the
+   referring resource was accessed with a secure protocol.
+   See <xref target="sensitive.information.in.uris" format="default" sectionFormat="of" derivedContent="Section 17.9"/> for additional
+   security considerations.
+
+- section-10.1.3-10: 
+   Some intermediaries have been known to indiscriminately remove Referer
+   header fields from outgoing requests. This has the unfortunate side effect
+   of interfering with protection against CSRF attacks, which can be far
+   more harmful to their users. Intermediaries and user agent extensions that
+   wish to limit information disclosure in Referer ought to restrict their
+   changes to specific edits, such as replacing internal domain names with
+   pseudonyms or truncating the query and/or path components.
+   An intermediary <bcp14>SHOULD NOT</bcp14> modify or delete the Referer header field when
+   the field value shares the same scheme and host as the target URI.
+
+- section-10.1.5-5: 
+   A sender <bcp14>SHOULD</bcp14> limit generated product identifiers to what is necessary
+   to identify the product; a sender <bcp14>MUST NOT</bcp14> generate advertising or other
+   nonessential information within the product identifier.
+   A sender <bcp14>SHOULD NOT</bcp14> generate information in <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">product-version</xref>
+   that is not a version identifier (i.e., successive versions of the same
+   product name ought to differ only in the product-version portion of the
+   product identifier).
+
+- section-10.1.5-8: 
+   A user agent <bcp14>SHOULD NOT</bcp14> generate a User-Agent header field containing needlessly
+   fine-grained detail and <bcp14>SHOULD</bcp14> limit the addition of subproducts by third
+   parties. Overly long and detailed User-Agent field values increase request
+   latency and the risk of a user being identified against their wishes
+   ("fingerprinting").
+
+- section-10.2.4-6: 
+   An origin server <bcp14>SHOULD NOT</bcp14> generate a Server header field containing needlessly
+   fine-grained detail and <bcp14>SHOULD</bcp14> limit the addition of subproducts by third
+   parties. Overly long and detailed Server field values increase response
+   latency and potentially reveal internal implementation details that might
+   make it (slightly) easier for attackers to find and exploit known security
+   holes.
+
+- section-13.1.3-15: 
+   An origin server that evaluates an If-Modified-Since condition
+   <bcp14>SHOULD NOT</bcp14> perform the requested method if the condition evaluates to
+   false; instead,
+   the origin server <bcp14>SHOULD</bcp14> generate a <xref target="status.304" format="none" sectionFormat="of" derivedContent="">304 (Not Modified)</xref>
+   response, including only those metadata that are useful for identifying or
+   updating a previously cached response.
+
+- section-14.2-6: 
+   A server that supports range requests <bcp14>MAY</bcp14> ignore or reject a
+   <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field that contains an invalid
+   <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> (<xref target="range.specifiers" format="default" sectionFormat="of" derivedContent="Section 14.1.1"/>),
+   a <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> with more than two overlapping ranges,
+   or a set of many small ranges that are not listed in ascending order,
+   since these are indications of either a broken client or a deliberate
+   denial-of-service attack (<xref target="overlapping.ranges" format="default" sectionFormat="of" derivedContent="Section 17.15"/>).
+   A client <bcp14>SHOULD NOT</bcp14> request multiple ranges that are inherently less
+   efficient to process and transfer than a single range that encompasses the
+   same data.
+
+- section-15.3.7-6: 
+   A sender that generates a 206 response to a request with an <xref target="field.if-range" format="none" sectionFormat="of" derivedContent="">If-Range</xref>
+   header field <bcp14>SHOULD NOT</bcp14> generate other representation header
+   fields beyond those required because the client
+   already has a prior response containing those header fields.
+   Otherwise, a sender <bcp14>MUST</bcp14> generate all of the representation header
+   fields that would have been sent in a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response
+   to the same request.
+
+- section-15.4.5-4: 
+   Since the goal of a 304 response is to minimize information transfer
+   when the recipient already has one or more cached representations,
+   a sender <bcp14>SHOULD NOT</bcp14> generate representation metadata other
+   than the above listed fields unless said metadata exists for the
+   purpose of guiding cache updates (e.g., <xref target="field.last-modified" format="none" sectionFormat="of" derivedContent="">Last-Modified</xref> might
+   be useful if the response does not have an <xref target="field.etag" format="none" sectionFormat="of" derivedContent="">ETag</xref> field).
+
+- section-15.5.4-2: 
+   If authentication credentials were provided in the request, the
+   server considers them insufficient to grant access.
+   The client <bcp14>SHOULD NOT</bcp14> automatically repeat the request with the same
+   credentials.
+   The client <bcp14>MAY</bcp14> repeat the request with new or different credentials.
+   However, a request might be forbidden for reasons unrelated to the
+   credentials.
+

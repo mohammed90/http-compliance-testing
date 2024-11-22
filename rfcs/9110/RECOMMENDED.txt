@@ -1,0 +1,6 @@
+- section-4.1-5: 
+   It is <bcp14>RECOMMENDED</bcp14> that all senders and recipients support, at a minimum,
+   URIs with lengths of 8000 octets in protocol elements. Note that this
+   implies some structures and on-wire representations (for example, the
+   request line in HTTP/1.1) will necessarily be larger in some cases.
+

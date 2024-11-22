@@ -1,0 +1,774 @@
+- section-2.2-7: 
+   When an implementation fails semantic conformance, recipients of that
+   implementation's messages will eventually develop workarounds to adjust
+   their behavior accordingly. A recipient <bcp14>MAY</bcp14> employ such workarounds while
+   remaining conformant to this protocol if the workarounds are limited to the
+   implementations at fault. For example, servers often scan portions of the
+   User-Agent field value, and user agents often scan the Server field value,
+   to adjust their own behavior with respect to known bugs or poorly chosen
+   defaults.
+
+- section-2.4-2: 
+   Unless noted otherwise, a recipient <bcp14>MAY</bcp14> attempt to recover a usable
+   protocol element from an invalid construct.  HTTP does not define
+   specific error handling mechanisms except when they have a direct impact
+   on security, since different applications of the protocol require
+   different error handling strategies.  For example, a Web browser might
+   wish to transparently recover from a response where the
+   <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field doesn't parse according to the ABNF,
+   whereas a systems control client might consider any form of error recovery
+   to be dangerous.
+
+- section-3.8-1: 
+   A "cache" is a local store of previous response messages and the
+   subsystem that controls its message storage, retrieval, and deletion.
+   A cache stores cacheable responses in order to reduce the response
+   time and network bandwidth consumption on future, equivalent
+   requests. Any client or server <bcp14>MAY</bcp14> employ a cache, though a cache
+   cannot be used while acting as a tunnel.
+
+- section-4.2.3-7: 
+   Two HTTP URIs that are equivalent after normalization (using any method)
+   can be assumed to identify the same resource, and any HTTP component <bcp14>MAY</bcp14>
+   perform normalization. As a result, distinct resources <bcp14>SHOULD NOT</bcp14> be
+   identified by HTTP URIs that are equivalent after normalization (using any
+   method defined in <xref target="URI" section="6.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc3986#section-6.2" derivedContent="URI"/>).
+
+- section-4.3.2-3: 
+   When an "http" URI is used within a context that calls for access to the
+   indicated resource, a client <bcp14>MAY</bcp14> attempt access by resolving the host
+   identifier to an IP address, establishing a TCP connection to that
+   address on the indicated port, and sending over that connection an HTTP
+   request message containing a request target that matches the client's
+   target URI (<xref target="target.resource" format="default" sectionFormat="of" derivedContent="Section 7.1"/>).
+
+- section-4.3.3-7: 
+   When an "https" URI is used within a context that calls for access to
+   the indicated resource, a client <bcp14>MAY</bcp14> attempt access by resolving the
+   host identifier to an IP address, establishing a TCP connection to that
+   address on the indicated port, securing the connection end-to-end by
+   successfully initiating TLS over TCP with confidentiality and integrity
+   protection, and sending over that connection an HTTP request message
+   containing a request target that matches the client's target URI
+   (<xref target="target.resource" format="default" sectionFormat="of" derivedContent="Section 7.1"/>).
+
+- section-4.3.4-6: 
+   If the certificate is not valid for the target URI's origin,
+   a user agent <bcp14>MUST</bcp14> either obtain confirmation from the user
+   before proceeding (see <xref target="user.agent" format="default" sectionFormat="of" derivedContent="Section 3.5"/>) or
+   terminate the connection with a bad certificate error. Automated
+   clients <bcp14>MUST</bcp14> log the error to an appropriate audit log (if available)
+   and <bcp14>SHOULD</bcp14> terminate the connection (with a bad certificate error).
+   Automated clients <bcp14>MAY</bcp14> provide a configuration setting that disables
+   this check, but <bcp14>MUST</bcp14> provide a setting which enables it.
+
+- section-5.3-1: 
+   A recipient <bcp14>MAY</bcp14> combine multiple field lines within a field section that
+   have the same field name
+   into one field line, without changing the semantics of the message, by
+   appending each subsequent field line value to the initial field line value
+   in order, separated by a comma (",") and optional whitespace
+   (<xref target="whitespace" format="none" sectionFormat="of" derivedContent="">OWS</xref>, defined in <xref target="whitespace" format="default" sectionFormat="of" derivedContent="Section 5.6.3"/>).
+   For consistency, use comma SP.
+
+- section-5.4-3: 
+   A client <bcp14>MAY</bcp14> discard or truncate received field lines that are larger
+   than the client wishes to process if the field semantics are such that the
+   dropped value(s) can be safely ignored without changing the
+   message framing or response semantics.
+
+- section-5.5-5: 
+   Field values containing CR, LF, or NUL characters are invalid and dangerous,
+   due to the varying ways that implementations might parse and interpret
+   those characters; a recipient of CR, LF, or NUL within a field value <bcp14>MUST</bcp14>
+   either reject the message or replace each of those characters with SP
+   before further processing or forwarding of that message. Field values
+   containing other CTL characters are also invalid; however,
+   recipients <bcp14>MAY</bcp14> retain such characters for the sake of robustness when
+   they appear within a safe context (e.g., an application-specific quoted
+   string that will not be processed by any downstream HTTP parser).
+
+- section-5.6.3-4: 
+   OWS and RWS have the same semantics as a single SP. Any content known to
+   be defined as OWS or RWS <bcp14>MAY</bcp14> be replaced with a single SP before
+   interpreting it or forwarding the message downstream.
+
+- section-5.6.3-6: 
+   BWS has no semantics. Any content known to be
+   defined as BWS <bcp14>MAY</bcp14> be removed before interpreting it or forwarding the
+   message downstream.
+
+- section-6.2-6: 
+   A client <bcp14>MAY</bcp14> send a lower request version if it is known that
+   the server incorrectly implements the HTTP specification, but only
+   after the client has attempted at least one normal request and determined
+   from the response status code or header fields (e.g., <xref target="field.server" format="none" sectionFormat="of" derivedContent="">Server</xref>) that
+   the server improperly handles higher request versions.
+
+- section-6.5.2-3: 
+   At the end of a message, a recipient <bcp14>MAY</bcp14> treat the set of received
+   trailer fields as a data structure of name/value pairs, similar to (but
+   separate from) the header fields. Additional processing expectations, if
+   any, can be defined within the field specification for a field intended
+   for use in trailers.
+
+- section-6.6.1-6: 
+   An origin server with a clock (as defined in
+   <xref target="http.date" format="default" sectionFormat="of" derivedContent="Section 5.6.7"/>) <bcp14>MUST</bcp14> generate a Date header field in
+   all <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>, <xref target="status.3xx" format="none" sectionFormat="of" derivedContent="">3xx (Redirection)</xref>,
+   and <xref target="status.4xx" format="none" sectionFormat="of" derivedContent="">4xx (Client Error)</xref> responses,
+   and <bcp14>MAY</bcp14> generate a Date header field in
+   <xref target="status.1xx" format="none" sectionFormat="of" derivedContent="">1xx (Informational)</xref> and
+   <xref target="status.5xx" format="none" sectionFormat="of" derivedContent="">5xx (Server Error)</xref> responses.
+
+- section-6.6.1-9: 
+   A recipient with a clock that receives a response with an invalid Date
+   header field value <bcp14>MAY</bcp14> replace that value with the time that
+   response was received.
+
+- section-6.6.1-10: 
+   A user agent <bcp14>MAY</bcp14> send a Date header field in a request, though generally
+   will not do so unless it is believed to convey useful information to the
+   server. For example, custom applications of HTTP might convey a Date if
+   the server is expected to adjust its interpretation of the user's request
+   based on differences between the user agent and server clocks.
+
+- section-7.6.2-5: 
+   A recipient <bcp14>MAY</bcp14> ignore a Max-Forwards header field received with any
+   other request methods.
+
+- section-7.6.3-4: 
+   A proxy <bcp14>MUST</bcp14> send an appropriate Via header field, as described below, in
+   each message that it forwards.
+   An HTTP-to-HTTP gateway <bcp14>MUST</bcp14> send an appropriate Via header field in
+   each inbound request message and <bcp14>MAY</bcp14> send a Via header field in
+   forwarded response messages.
+
+- section-7.6.3-6: 
+   The received-by portion is normally the host and optional
+   port number of a recipient server or client that subsequently forwarded the
+   message.
+   However, if the real host is considered to be sensitive information, a
+   sender <bcp14>MAY</bcp14> replace it with a pseudonym. If a port is not provided,
+   a recipient <bcp14>MAY</bcp14> interpret that as meaning it was received on the default
+   port, if any, for the received-protocol.
+
+- section-7.6.3-6: 
+   The received-by portion is normally the host and optional
+   port number of a recipient server or client that subsequently forwarded the
+   message.
+   However, if the real host is considered to be sensitive information, a
+   sender <bcp14>MAY</bcp14> replace it with a pseudonym. If a port is not provided,
+   a recipient <bcp14>MAY</bcp14> interpret that as meaning it was received on the default
+   port, if any, for the received-protocol.
+
+- section-7.6.3-7: 
+   A sender <bcp14>MAY</bcp14> generate comments to identify the
+   software of each recipient, analogous to the <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">User-Agent</xref> and
+   <xref target="field.server" format="none" sectionFormat="of" derivedContent="">Server</xref> header fields. However, comments in Via
+   are optional, and a recipient <bcp14>MAY</bcp14> remove them prior to forwarding the
+   message.
+
+- section-7.6.3-7: 
+   A sender <bcp14>MAY</bcp14> generate comments to identify the
+   software of each recipient, analogous to the <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">User-Agent</xref> and
+   <xref target="field.server" format="none" sectionFormat="of" derivedContent="">Server</xref> header fields. However, comments in Via
+   are optional, and a recipient <bcp14>MAY</bcp14> remove them prior to forwarding the
+   message.
+
+- section-7.6.3-11: 
+   An intermediary <bcp14>MAY</bcp14> combine an ordered subsequence of Via header
+   field list members into a single member if the entries have identical
+   received-protocol values. For example,
+
+- section-7.7-3: 
+   If a proxy receives a target URI with a host name that is not a
+   fully qualified domain name, it <bcp14>MAY</bcp14> add its own domain to the host name
+   it received when forwarding the request.  A proxy <bcp14>MUST NOT</bcp14> change the
+   host name if the target URI contains a fully qualified domain name.
+
+- section-7.7-6: 
+   A proxy <bcp14>MAY</bcp14> transform the content of a message
+   that does not contain a no-transform cache directive.
+   A proxy that transforms the content of a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response
+   can inform downstream recipients that a transformation has been
+   applied by changing the response status code to
+   <xref target="status.203" format="none" sectionFormat="of" derivedContent="">203 (Non-Authoritative Information)</xref> (<xref target="status.203" format="default" sectionFormat="of" derivedContent="Section 15.3.4"/>).
+
+- section-7.8-2: 
+   A client <bcp14>MAY</bcp14> send a list of protocol names in the Upgrade header field
+   of a request to invite the server to switch to one or more of the named
+   protocols, in order of descending preference, before sending
+   the final response. A server <bcp14>MAY</bcp14> ignore a received Upgrade header field
+   if it wishes to continue using the current protocol on that connection.
+   Upgrade cannot be used to insist on a protocol change.
+
+- section-7.8-2: 
+   A client <bcp14>MAY</bcp14> send a list of protocol names in the Upgrade header field
+   of a request to invite the server to switch to one or more of the named
+   protocols, in order of descending preference, before sending
+   the final response. A server <bcp14>MAY</bcp14> ignore a received Upgrade header field
+   if it wishes to continue using the current protocol on that connection.
+   Upgrade cannot be used to insist on a protocol change.
+
+- section-7.8-5: 
+   A server that sends a <xref target="status.101" format="none" sectionFormat="of" derivedContent="">101 (Switching Protocols)</xref> response
+   <bcp14>MUST</bcp14> send an Upgrade header field to indicate the new protocol(s) to
+   which the connection is being switched; if multiple protocol layers are
+   being switched, the sender <bcp14>MUST</bcp14> list the protocols in layer-ascending
+   order. A server <bcp14>MUST NOT</bcp14> switch to a protocol that was not indicated by
+   the client in the corresponding request's Upgrade header field.
+   A server <bcp14>MAY</bcp14> choose to ignore the order of preference indicated by the
+   client and select the new protocol(s) based on other factors, such as the
+   nature of the request or the current load on the server.
+
+- section-7.8-7: 
+   A server <bcp14>MAY</bcp14> send an Upgrade header field in any other response to
+   advertise that it implements support for upgrading to the listed protocols,
+   in order of descending preference, when appropriate for a future request.
+
+- section-8.3-5: 
+   A sender that generates a message containing content <bcp14>SHOULD</bcp14>
+   generate a Content-Type header field in that message unless the intended
+   media type of the enclosed representation is unknown to the sender.
+   If a Content-Type header field is not present, the recipient <bcp14>MAY</bcp14> either
+   assume a media type of
+   "application/octet-stream" (<xref target="RFC2046" sectionFormat="comma" section="4.5.1" format="default" derivedLink="https://rfc-editor.org/rfc/rfc2046#section-4.5.1" derivedContent="RFC2046"/>)
+   or examine the data to determine its type.
+
+- section-8.3.1-4: 
+   The type/subtype <bcp14>MAY</bcp14> be followed by semicolon-delimited parameters
+   (<xref target="parameter" format="default" sectionFormat="of" derivedContent="Section 5.6.6"/>) in the form of name/value pairs.
+   The presence or absence of a parameter might be significant to the
+   processing of a media type, depending on its definition within the media
+   type registry.
+   Parameter values might or might not be case-sensitive, depending on the
+   semantics of the parameter name.
+
+- section-8.4-9: 
+   An origin server <bcp14>MAY</bcp14> respond with a status code of
+   <xref target="status.415" format="none" sectionFormat="of" derivedContent="">415 (Unsupported Media Type)</xref> if a representation in the
+   request message has a content coding that is not acceptable.
+
+- section-8.5-6: 
+   Multiple languages <bcp14>MAY</bcp14> be listed for content that is intended for
+   multiple audiences. For example, a rendition of the "Treaty of
+   Waitangi", presented simultaneously in the original Maori and English
+   versions, would call for
+
+- section-8.5-9: 
+   Content-Language <bcp14>MAY</bcp14> be applied to any media type -- it is not
+   limited to textual documents.
+
+- section-8.6-6: 
+   A server <bcp14>MAY</bcp14> send a Content-Length header field in a response to a HEAD
+   request (<xref target="HEAD" format="default" sectionFormat="of" derivedContent="Section 9.3.2"/>); a server <bcp14>MUST NOT</bcp14> send Content-Length in such a
+   response unless its field value equals the decimal number of octets that
+   would have been sent in the content of a response if the same
+   request had used the GET method.
+
+- section-8.6-7: 
+   A server <bcp14>MAY</bcp14> send a Content-Length header field in a
+   <xref target="status.304" format="none" sectionFormat="of" derivedContent="">304 (Not Modified)</xref> response to a conditional GET request
+   (<xref target="status.304" format="default" sectionFormat="of" derivedContent="Section 15.4.5"/>); a server <bcp14>MUST NOT</bcp14> send Content-Length in such a
+   response unless its field value equals the decimal number of octets that
+   would have been sent in the content of a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref>
+   response to the same request.
+
+- section-8.6-13: 
+   Likewise, a sender <bcp14>MUST NOT</bcp14> forward a message with a Content-Length
+   header field value that does not match the ABNF above, with one exception:
+   a recipient of a Content-Length header field value consisting of the same
+   decimal value repeated as a comma-separated list (e.g,
+   "Content-Length: 42, 42") <bcp14>MAY</bcp14> either reject the message as invalid or
+   replace that invalid field value with a single instance of the decimal
+   value, since this likely indicates that a duplicate was generated or
+   combined by an upstream message processor.
+
+- section-8.7-5: 
+   If Content-Location is included in a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>
+   response message and its value refers (after conversion to absolute form)
+   to a URI that is the same as the target URI, then
+   the recipient <bcp14>MAY</bcp14> consider the content to be a current representation of
+   that resource at the time indicated by the message origination date.
+   For a GET (<xref target="GET" format="default" sectionFormat="of" derivedContent="Section 9.3.1"/>) or HEAD (<xref target="HEAD" format="default" sectionFormat="of" derivedContent="Section 9.3.2"/>) request,
+   this is the same as the default semantics when no Content-Location is
+   provided by the server.
+   For a state-changing request like PUT (<xref target="PUT" format="default" sectionFormat="of" derivedContent="Section 9.3.4"/>) or
+   POST (<xref target="POST" format="default" sectionFormat="of" derivedContent="Section 9.3.3"/>), it implies that the server's response
+   contains the new representation of that resource, thereby distinguishing it
+   from representations that might only report about the action
+   (e.g., "It worked!").
+   This allows authoring applications to update their local copies without
+   the need for a subsequent GET request.
+
+- section-8.7-9: 
+   An origin server that receives a Content-Location field in a request
+   message <bcp14>MUST</bcp14> treat the information as transitory request context rather
+   than as metadata to be saved verbatim as part of the representation.
+   An origin server <bcp14>MAY</bcp14> use that context to guide in processing the
+   request or to save it for other uses, such as within source links or
+   versioning metadata. However, an origin server <bcp14>MUST NOT</bcp14> use such context
+   information to alter the request semantics.
+
+- section-8.8.3-8: 
+   A sender <bcp14>MAY</bcp14> send the ETag field in a trailer section (see
+   <xref target="trailer.fields" format="default" sectionFormat="of" derivedContent="Section 6.5"/>). However, since trailers are often
+   ignored, it is preferable to send ETag as a header field unless the
+   entity tag is generated while sending the content.
+
+- section-9.3.1-7: 
+   The response to a GET request is cacheable; a cache <bcp14>MAY</bcp14> use it to satisfy
+   subsequent GET and HEAD requests unless otherwise indicated by the
+   Cache-Control header field (<xref target="CACHING" section="5.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2" derivedContent="CACHING"/>).
+
+- section-9.3.2-2: 
+   The server <bcp14>SHOULD</bcp14> send the same header fields in response to a HEAD
+   request as it would have sent if the request method had been GET.
+   However, a server <bcp14>MAY</bcp14> omit header fields for which a value is determined
+   only while generating the content. For example, some servers buffer a
+   dynamic response to GET until a minimum amount of data is generated so
+   that they can more efficiently delimit small responses or make late
+   decisions with regard to content selection. Such a response to GET might
+   contain <xref target="field.content-length" format="none" sectionFormat="of" derivedContent="">Content-Length</xref> and <xref target="field.vary" format="none" sectionFormat="of" derivedContent="">Vary</xref> fields, for
+   example, that are not generated within a HEAD response. These minor
+   inconsistencies are considered preferable to generating and discarding the
+   content for a HEAD request, since HEAD is usually requested for the
+   sake of efficiency.
+
+- section-9.3.2-4: 
+   The response to a HEAD request is cacheable; a cache <bcp14>MAY</bcp14> use it to
+   satisfy subsequent HEAD requests unless otherwise indicated by the
+   Cache-Control header field (<xref target="CACHING" section="5.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2" derivedContent="CACHING"/>).
+   A HEAD response might also affect previously cached responses to GET;
+   see <xref target="CACHING" section="4.3.5" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-4.3.5" derivedContent="CACHING"/>.
+
+- section-9.3.3-6: 
+   If the result of processing a POST would be equivalent to a representation
+   of an existing resource, an origin server <bcp14>MAY</bcp14> redirect the user agent to
+   that resource by sending a <xref target="status.303" format="none" sectionFormat="of" derivedContent="">303 (See Other)</xref> response with the
+   existing resource's identifier in the <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> field.
+   This has the benefits of providing the user agent a resource identifier
+   and transferring the representation via a method more amenable to shared
+   caching, though at the cost of an extra request if the user agent does not
+   already have the representation cached.
+
+- section-9.3.4-10: 
+   Proper interpretation of a PUT request presumes that the user agent knows
+   which target resource is desired. A service that selects a proper URI on
+   behalf of the client, after receiving a state-changing request, <bcp14>SHOULD</bcp14> be
+   implemented using the POST method rather than PUT. If the origin server
+   will not make the requested PUT state change to the target resource and
+   instead wishes to have it applied to a different resource, such as when the
+   resource has been moved to a different URI, then the origin server <bcp14>MUST</bcp14>
+   send an appropriate <xref target="status.3xx" format="none" sectionFormat="of" derivedContent="">3xx (Redirection)</xref> response; the
+   user agent <bcp14>MAY</bcp14> then make its own decision regarding whether or not to
+   redirect the request.
+
+- section-9.3.6-6: 
+   CONNECT is intended for use in requests to a proxy.
+   The recipient can establish a tunnel either by directly connecting to
+   the server identified by the request target or, if configured to use
+   another proxy, by forwarding the CONNECT request to the next inbound proxy.
+   An origin server <bcp14>MAY</bcp14> accept a CONNECT request, but most origin servers
+   do not implement CONNECT.
+
+- section-9.3.7-5: 
+   A client <bcp14>MAY</bcp14> send a <xref target="field.max-forwards" format="none" sectionFormat="of" derivedContent="">Max-Forwards</xref> header field in an
+   OPTIONS request to target a specific recipient in the request chain (see
+   <xref target="field.max-forwards" format="default" sectionFormat="of" derivedContent="Section 7.6.2"/>). A proxy <bcp14>MUST NOT</bcp14> generate a
+   Max-Forwards header field while forwarding a request unless that request
+   was received with a Max-Forwards field.
+
+- section-10.1.1-5: 
+   A server that receives an Expect field value containing a member other than
+   <xref target="field.expect" format="none" sectionFormat="of" derivedContent="">100-continue</xref>
+            <bcp14>MAY</bcp14> respond with a
+   <xref target="status.417" format="none" sectionFormat="of" derivedContent="">417 (Expectation Failed)</xref> status code to indicate that the
+   unexpected expectation cannot be met.
+
+- section-10.1.1-19: 
+   If the proxy believes (from configuration or past interaction) that the
+   next inbound server only supports HTTP/1.0, the proxy <bcp14>MAY</bcp14> generate an
+   immediate <xref target="status.100" format="none" sectionFormat="of" derivedContent="">100 (Continue)</xref> response to encourage the client to
+   begin sending the content.
+
+- section-10.1.3-8: 
+   The Referer header field value need not convey the full URI of the referring
+   resource; a user agent <bcp14>MAY</bcp14> truncate parts other than the referring origin.
+
+- section-10.2.1-5: 
+   The actual set of allowed methods is defined by the origin server at the
+   time of each request. An origin server <bcp14>MUST</bcp14> generate an Allow header field in a
+   <xref target="status.405" format="none" sectionFormat="of" derivedContent="">405 (Method Not Allowed)</xref> response and <bcp14>MAY</bcp14> do so in any
+   other response. An empty Allow field value indicates that the resource
+   allows no methods, which might occur in a 405 response if the resource has
+   been temporarily disabled by configuration.
+
+- section-10.2.4-1: 
+   The "Server" header field contains information about the
+   software used by the origin server to handle the request, which is often
+   used by clients to help identify the scope of reported interoperability
+   problems, to work around or tailor requests to avoid particular server
+   limitations, and for analytics regarding server or operating system use.
+   An origin server <bcp14>MAY</bcp14> generate a Server header field in its responses.
+
+- section-11.5-3: 
+   The protection space determines the domain over which credentials can
+   be automatically applied. If a prior request has been authorized, the
+   user agent <bcp14>MAY</bcp14> reuse the same credentials for all other requests within
+   that protection space for a period of time determined by the authentication
+   scheme, parameters, and/or user preferences (such as a configurable
+   inactivity timeout).
+
+- section-11.6.1-3: 
+   A server generating a <xref target="status.401" format="none" sectionFormat="of" derivedContent="">401 (Unauthorized)</xref> response
+   <bcp14>MUST</bcp14> send a WWW-Authenticate header field containing at least one
+   challenge.  A server <bcp14>MAY</bcp14> generate a WWW-Authenticate header field
+   in other response messages to indicate that supplying credentials
+   (or different credentials) might affect the response.
+
+- section-11.7.2-3: 
+   Unlike <xref target="field.authorization" format="none" sectionFormat="of" derivedContent="">Authorization</xref>, the Proxy-Authorization header field
+   applies only to the next inbound proxy that demanded authentication using
+   the <xref target="field.proxy-authenticate" format="none" sectionFormat="of" derivedContent="">Proxy-Authenticate</xref> header field. When multiple proxies are used
+   in a chain, the Proxy-Authorization header field is consumed by the first
+   inbound proxy that was expecting to receive credentials. A proxy <bcp14>MAY</bcp14>
+   relay the credentials from the client request to the next proxy if that is
+   the mechanism by which the proxies cooperatively authenticate a given
+   request.
+
+- section-12.1-2: 
+   Proactive negotiation is advantageous when the algorithm for
+   selecting from among the available representations is difficult to
+   describe to a user agent, or when the server desires to send its
+   "best guess" to the user agent along with the first response (when that
+   "best guess" is good enough for the user, this avoids the round-trip
+   delay of a subsequent request). In order to improve the server's
+   guess, a user agent <bcp14>MAY</bcp14> send request header fields that describe
+   its preferences.
+
+- section-12.5.2-3: 
+   Charset names are defined in <xref target="charset" format="default" sectionFormat="of" derivedContent="Section 8.3.2"/>.
+   A user agent <bcp14>MAY</bcp14> associate a quality value with each charset to indicate
+   the user's relative preference for that charset, as defined in <xref target="quality.values" format="default" sectionFormat="of" derivedContent="Section 12.4.2"/>.
+   An example is
+
+- section-12.5.3-6: 
+   Each codings value <bcp14>MAY</bcp14> be given an associated quality value (weight)
+   representing the preference for that encoding, as defined in <xref target="quality.values" format="default" sectionFormat="of" derivedContent="Section 12.4.2"/>.
+   The asterisk "*" symbol in an Accept-Encoding field matches any available
+   content coding not explicitly listed in the field.
+
+- section-13.1.1-10: 
+   An origin server that evaluates an If-Match condition <bcp14>MUST NOT</bcp14> perform
+   the requested method if the condition evaluates to false. Instead,
+   the origin server <bcp14>MAY</bcp14>
+   indicate that the conditional request failed by responding with a
+   <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> status code. Alternatively,
+   if the request is a state-changing operation that appears to have already
+   been applied to the selected representation, the origin server <bcp14>MAY</bcp14> respond
+   with a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref> status code
+   (i.e., the change requested by the user agent has already succeeded, but
+   the user agent might not be aware of it, perhaps because the prior response
+   was lost or an equivalent change was made by some other user agent).
+
+- section-13.1.1-10: 
+   An origin server that evaluates an If-Match condition <bcp14>MUST NOT</bcp14> perform
+   the requested method if the condition evaluates to false. Instead,
+   the origin server <bcp14>MAY</bcp14>
+   indicate that the conditional request failed by responding with a
+   <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> status code. Alternatively,
+   if the request is a state-changing operation that appears to have already
+   been applied to the selected representation, the origin server <bcp14>MAY</bcp14> respond
+   with a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref> status code
+   (i.e., the change requested by the user agent has already succeeded, but
+   the user agent might not be aware of it, perhaps because the prior response
+   was lost or an equivalent change was made by some other user agent).
+
+- section-13.1.1-12: 
+   A client <bcp14>MAY</bcp14> send an If-Match header field in a
+   <xref target="GET" format="none" sectionFormat="of" derivedContent="">GET</xref> request to indicate that it would prefer a
+   <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> response if the selected
+   representation does not match. However, this is only useful in range
+   requests (<xref target="range.requests" format="default" sectionFormat="of" derivedContent="Section 14"/>) for completing a previously
+   received partial representation when there is no desire for a new
+   representation. <xref target="field.if-range" format="none" sectionFormat="of" derivedContent="">If-Range</xref> (<xref target="field.if-range" format="default" sectionFormat="of" derivedContent="Section 13.1.5"/>)
+   is better suited for range requests when the client prefers to receive a
+   new representation.
+
+- section-13.1.1-13: 
+   A cache or intermediary <bcp14>MAY</bcp14> ignore If-Match because its
+   interoperability features are only necessary for an origin server.
+
+- section-13.1.4-13: 
+   An origin server that evaluates an If-Unmodified-Since condition <bcp14>MUST NOT</bcp14>
+   perform the requested method if the condition evaluates to false.
+   Instead, the origin server <bcp14>MAY</bcp14> indicate that the conditional request
+   failed by responding with a <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref>
+   status code. Alternatively, if the request is a state-changing operation
+   that appears to have already been applied to the selected representation,
+   the origin server <bcp14>MAY</bcp14> respond with a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>
+   status code
+   (i.e., the change requested by the user agent has already succeeded, but
+   the user agent might not be aware of it, perhaps because the prior response
+   was lost or an equivalent change was made by some other user agent).
+
+- section-13.1.4-13: 
+   An origin server that evaluates an If-Unmodified-Since condition <bcp14>MUST NOT</bcp14>
+   perform the requested method if the condition evaluates to false.
+   Instead, the origin server <bcp14>MAY</bcp14> indicate that the conditional request
+   failed by responding with a <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref>
+   status code. Alternatively, if the request is a state-changing operation
+   that appears to have already been applied to the selected representation,
+   the origin server <bcp14>MAY</bcp14> respond with a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>
+   status code
+   (i.e., the change requested by the user agent has already succeeded, but
+   the user agent might not be aware of it, perhaps because the prior response
+   was lost or an equivalent change was made by some other user agent).
+
+- section-13.1.4-15: 
+   A client <bcp14>MAY</bcp14> send an If-Unmodified-Since header field in a
+   <xref target="GET" format="none" sectionFormat="of" derivedContent="">GET</xref> request to indicate that it would prefer a
+   <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> response if the selected
+   representation has been modified. However, this is only useful in range
+   requests (<xref target="range.requests" format="default" sectionFormat="of" derivedContent="Section 14"/>) for completing a previously
+   received partial representation when there is no desire for a new
+   representation. <xref target="field.if-range" format="none" sectionFormat="of" derivedContent="">If-Range</xref> (<xref target="field.if-range" format="default" sectionFormat="of" derivedContent="Section 13.1.5"/>)
+   is better suited for range requests when the client prefers to receive a
+   new representation.
+
+- section-13.1.4-16: 
+   A cache or intermediary <bcp14>MAY</bcp14> ignore If-Unmodified-Since because its
+   interoperability features are only necessary for an origin server.
+
+- section-14.2-3: 
+   A server <bcp14>MAY</bcp14> ignore the Range header field. However, origin servers and
+   intermediate caches ought to support byte ranges when possible, since they
+   support efficient recovery from partially failed transfers and partial
+   retrieval of large representations.
+
+- section-14.2-5: 
+   An origin server <bcp14>MUST</bcp14> ignore a Range header field that contains a range
+   unit it does not understand. A proxy <bcp14>MAY</bcp14> discard a Range header
+   field that contains a range unit it does not understand.
+
+- section-14.2-6: 
+   A server that supports range requests <bcp14>MAY</bcp14> ignore or reject a
+   <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field that contains an invalid
+   <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> (<xref target="range.specifiers" format="default" sectionFormat="of" derivedContent="Section 14.1.1"/>),
+   a <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> with more than two overlapping ranges,
+   or a set of many small ranges that are not listed in ascending order,
+   since these are indications of either a broken client or a deliberate
+   denial-of-service attack (<xref target="overlapping.ranges" format="default" sectionFormat="of" derivedContent="Section 17.15"/>).
+   A client <bcp14>SHOULD NOT</bcp14> request multiple ranges that are inherently less
+   efficient to process and transfer than a single range that encompasses the
+   same data.
+
+- section-14.2-7: 
+   A server that supports range requests <bcp14>MAY</bcp14> ignore a <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref>
+   header field when the selected representation has no content
+   (i.e., the selected representation's data is of zero length).
+
+- section-14.3-6: 
+   A client <bcp14>MAY</bcp14> generate range requests regardless of having received an
+   Accept-Ranges field. The information only provides advice for the sake of
+   improving performance and reducing unnecessary network transfers.
+
+- section-14.3-8: 
+   A server that does not support any kind of range request for the target
+   resource <bcp14>MAY</bcp14> send
+
+- section-14.3-11: 
+   The Accept-Ranges field <bcp14>MAY</bcp14> be sent in a trailer section, but is preferred
+   to be sent as a header field because the information is particularly useful
+   for restarting large information transfers that have failed in mid-content
+   (before the trailer section is received).
+
+- section-15.2-3: 
+   A client <bcp14>MUST</bcp14> be able to parse one or more 1xx responses received
+   prior to a final response, even if the client does not expect one.
+   A user agent <bcp14>MAY</bcp14> ignore unexpected 1xx responses.
+
+- section-15.3.7.2-4: 
+   When multiple ranges are requested, a server <bcp14>MAY</bcp14> coalesce any of the
+   ranges that overlap, or that are separated by a gap that is smaller than the
+   overhead of sending multiple parts, regardless of the order in which the
+   corresponding range-spec appeared in the received <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref>
+   header field. Since the typical overhead between each part of a
+   "multipart/byteranges" is around 80 bytes, depending on the selected
+   representation's media type and the chosen boundary parameter length, it
+   can be less efficient to transfer many small disjoint parts than it is to
+   transfer the entire selected representation.
+
+- section-15.3.7.2-5: 
+   A server <bcp14>MUST NOT</bcp14> generate a multipart response to a request for a single
+   range, since a client that does not request multiple parts might not
+   support multipart responses. However, a server <bcp14>MAY</bcp14> generate a
+   "multipart/byteranges" response with only a single body part if multiple
+   ranges were requested and only one range was found to be satisfiable or
+   only one range remained after coalescing.
+   A client that cannot process a "multipart/byteranges" response <bcp14>MUST NOT</bcp14>
+   generate a request that asks for multiple ranges.
+
+- section-15.3.7.3-2: 
+   A client that has received multiple partial responses to GET requests on a
+   target resource <bcp14>MAY</bcp14> combine those responses into a larger continuous
+   range if they share the same strong validator.
+
+- section-15.4-4: 
+   If a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field
+   (<xref target="field.location" format="default" sectionFormat="of" derivedContent="Section 10.2.2"/>) is provided, the user agent <bcp14>MAY</bcp14>
+   automatically redirect its request to the URI referenced by the Location
+   field value, even if the specific status code is not understood.
+   Automatic redirection needs to be done with care for methods not known to be
+   <xref target="safe.methods" format="none" sectionFormat="of" derivedContent="">safe</xref>, as defined in <xref target="safe.methods" format="default" sectionFormat="of" derivedContent="Section 9.2.1"/>, since
+   the user might not wish to redirect an unsafe request.
+
+- section-15.4.1-2: 
+   If the server has a preferred choice, the server <bcp14>SHOULD</bcp14> generate a
+   <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field containing a preferred choice's URI
+   reference. The user agent <bcp14>MAY</bcp14> use the Location field value for automatic
+   redirection.
+
+- section-15.4.1-3: 
+   For request methods other than HEAD, the server <bcp14>SHOULD</bcp14> generate content
+   in the 300 response containing a list of representation metadata and URI
+   reference(s) from which the user or user agent can choose the one most
+   preferred. The user agent <bcp14>MAY</bcp14> make a selection from that list
+   automatically if it understands the provided media type. A specific format
+   for automatic selection is not defined by this specification because HTTP
+   tries to remain orthogonal to the definition of its content.
+   In practice, the representation is provided in some easily parsed format
+   believed to be acceptable to the user agent, as determined by shared design
+   or content negotiation, or in some commonly accepted hypertext format.
+
+- section-15.4.2-2: 
+   The server <bcp14>SHOULD</bcp14> generate a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field in the
+   response containing a preferred URI reference for the new permanent URI.
+   The user agent <bcp14>MAY</bcp14> use the Location field value for automatic redirection.
+   The server's response content usually contains a short hypertext note with
+   a hyperlink to the new URI(s).
+
+- section-15.4.2-3.1: 
+                     <strong>Note:</strong> For historical reasons, a user agent <bcp14>MAY</bcp14> change the
+    request method from POST to GET for the subsequent request. If this
+    behavior is undesired, the <xref target="status.308" format="none" sectionFormat="of" derivedContent="">308 (Permanent Redirect)</xref>
+    status code can be used instead.
+            
+- section-15.4.3-2: 
+   The server <bcp14>SHOULD</bcp14> generate a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field in the
+   response containing a URI reference for the different URI.
+   The user agent <bcp14>MAY</bcp14> use the Location field value for automatic redirection.
+   The server's response content usually contains a short hypertext note with
+   a hyperlink to the different URI(s).
+
+- section-15.4.3-3.1: 
+                     <strong>Note:</strong> For historical reasons, a user agent <bcp14>MAY</bcp14> change the
+    request method from POST to GET for the subsequent request. If this
+    behavior is undesired, the <xref target="status.307" format="none" sectionFormat="of" derivedContent="">307 (Temporary Redirect)</xref>
+    status code can be used instead.
+            
+- section-15.4.8-2: 
+   The server <bcp14>SHOULD</bcp14> generate a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field in the
+   response containing a URI reference for the different URI.
+   The user agent <bcp14>MAY</bcp14> use the Location field value for automatic redirection.
+   The server's response content usually contains a short hypertext note with
+   a hyperlink to the different URI(s).
+
+- section-15.4.9-2: 
+   The server <bcp14>SHOULD</bcp14> generate a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field in the
+   response containing a preferred URI reference for the new permanent URI.
+   The user agent <bcp14>MAY</bcp14> use the Location field value for automatic redirection.
+   The server's response content usually contains a short hypertext note with
+   a hyperlink to the new URI(s).
+
+- section-15.5.2-2: 
+   If the request included authentication credentials, then the 401 response
+   indicates that authorization has been refused for those credentials.
+   The user agent <bcp14>MAY</bcp14> repeat the request with a new or replaced
+   <xref target="field.authorization" format="none" sectionFormat="of" derivedContent="">Authorization</xref> header field (<xref target="field.authorization" format="default" sectionFormat="of" derivedContent="Section 11.6.2"/>).
+   If the 401 response contains the same challenge as the prior response, and
+   the user agent has already attempted authentication at least once, then the
+   user agent <bcp14>SHOULD</bcp14> present the enclosed representation to the user, since
+   it usually contains relevant diagnostic information.
+
+- section-15.5.4-2: 
+   If authentication credentials were provided in the request, the
+   server considers them insufficient to grant access.
+   The client <bcp14>SHOULD NOT</bcp14> automatically repeat the request with the same
+   credentials.
+   The client <bcp14>MAY</bcp14> repeat the request with new or different credentials.
+   However, a request might be forbidden for reasons unrelated to the
+   credentials.
+
+- section-15.5.4-3: 
+   An origin server that wishes to "hide" the current existence of a forbidden
+   <xref target="target.resource" format="none" sectionFormat="of" derivedContent="">target resource</xref>
+            <bcp14>MAY</bcp14> instead respond with a status
+   code of <xref target="status.404" format="none" sectionFormat="of" derivedContent="">404 (Not Found)</xref>.
+
+- section-15.5.7-2: 
+   The server <bcp14>SHOULD</bcp14> generate content containing a list of available
+   representation characteristics and corresponding resource identifiers from
+   which the user or user agent can choose the one most appropriate.
+   A user agent <bcp14>MAY</bcp14> automatically select the most appropriate choice from
+   that list. However, this specification does not define any standard for
+   such automatic selection, as described in <xref target="status.300" format="default" sectionFormat="of" derivedContent="Section 15.4.1"/>.
+
+- section-15.5.8-1: 
+   The 407 (Proxy Authentication Required) status code is
+   similar to <xref target="status.401" format="none" sectionFormat="of" derivedContent="">401 (Unauthorized)</xref>, but it indicates that the client
+   needs to authenticate itself in order to use a proxy for this request.
+   The proxy <bcp14>MUST</bcp14> send a <xref target="field.proxy-authenticate" format="none" sectionFormat="of" derivedContent="">Proxy-Authenticate</xref> header field
+   (<xref target="field.proxy-authenticate" format="default" sectionFormat="of" derivedContent="Section 11.7.1"/>) containing a challenge
+   applicable to that proxy for the request. The client <bcp14>MAY</bcp14> repeat
+   the request with a new or replaced <xref target="field.proxy-authorization" format="none" sectionFormat="of" derivedContent="">Proxy-Authorization</xref>
+   header field (<xref target="field.proxy-authorization" format="default" sectionFormat="of" derivedContent="Section 11.7.2"/>).
+
+- section-15.5.9-2: 
+   If the client has an outstanding request in transit, it <bcp14>MAY</bcp14> repeat that
+   request. If the current connection is not usable (e.g., as it would be in
+   HTTP/1.1 because request delimitation is lost), a new connection will be
+   used.
+
+- section-15.5.12-1: 
+   The 411 (Length Required) status code indicates that the
+   server refuses to accept the request without a defined
+   <xref target="field.content-length" format="none" sectionFormat="of" derivedContent="">Content-Length</xref> (<xref target="field.content-length" format="default" sectionFormat="of" derivedContent="Section 8.6"/>).
+   The client <bcp14>MAY</bcp14> repeat the request if it adds a valid Content-Length
+   header field containing the length of the request content.
+
+- section-15.5.14-1: 
+   The 413 (Content Too Large) status code indicates
+   that the server is refusing to process a request because the request
+   content is larger than the server is willing or able to process.
+   The server <bcp14>MAY</bcp14> terminate the request, if the protocol version in use
+   allows it; otherwise, the server <bcp14>MAY</bcp14> close the connection.
+
+- section-15.5.14-1: 
+   The 413 (Content Too Large) status code indicates
+   that the server is refusing to process a request because the request
+   content is larger than the server is willing or able to process.
+   The server <bcp14>MAY</bcp14> terminate the request, if the protocol version in use
+   allows it; otherwise, the server <bcp14>MAY</bcp14> close the connection.
+
+- section-15.5.14-2: 
+   If the condition is temporary, the server <bcp14>SHOULD</bcp14> generate a
+   <xref target="field.retry-after" format="none" sectionFormat="of" derivedContent="">Retry-After</xref> header field to indicate that it is temporary
+   and after what time the client <bcp14>MAY</bcp14> try again.
+
+- section-15.5.20-2: 
+   A client that receives a 421 (Misdirected Request) response <bcp14>MAY</bcp14> retry the
+   request, whether or not the request method is idempotent, over a different
+   connection, such as a fresh connection specific to the target resource's
+   origin, or via an alternative service <xref target="ALTSVC" format="default" sectionFormat="of" derivedContent="ALTSVC"/>.
+
+- section-15.6.4-1: 
+   The 503 (Service Unavailable) status code indicates that the
+   server is currently unable to handle the request due to a temporary overload
+   or scheduled maintenance, which will likely be alleviated after some delay.
+   The server <bcp14>MAY</bcp14> send a <xref target="field.retry-after" format="none" sectionFormat="of" derivedContent="">Retry-After</xref> header field
+   (<xref target="field.retry-after" format="default" sectionFormat="of" derivedContent="Section 10.2.3"/>) to suggest an appropriate
+   amount of time for the client to wait before retrying the request.
+
