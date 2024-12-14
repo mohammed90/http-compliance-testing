@@ -1,0 +1,8 @@
+- section-7.8-2: 
+   A client <bcp14>MAY</bcp14> send a list of protocol names in the Upgrade header field
+   of a request to invite the server to switch to one or more of the named
+   protocols, in order of descending preference, before sending
+   the final response. A server <bcp14>MAY</bcp14> ignore a received Upgrade header field
+   if it wishes to continue using the current protocol on that connection.
+   Upgrade cannot be used to insist on a protocol change.
+

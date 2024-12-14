@@ -1,0 +1,7 @@
+- section-10.2.2-5: 
+   If the Location value provided in a <xref target="status.3xx" format="none" sectionFormat="of" derivedContent="">3xx (Redirection)</xref>
+   response does not have a fragment component, a user agent <bcp14>MUST</bcp14> process the
+   redirection as if the value inherits the fragment component of the URI
+   reference used to generate the target URI (i.e., the redirection
+   inherits the original reference's fragment, if any).
+

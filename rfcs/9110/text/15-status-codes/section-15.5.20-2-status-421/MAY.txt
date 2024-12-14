@@ -1,0 +1,6 @@
+- section-15.5.20-2: 
+   A client that receives a 421 (Misdirected Request) response <bcp14>MAY</bcp14> retry the
+   request, whether or not the request method is idempotent, over a different
+   connection, such as a fresh connection specific to the target resource's
+   origin, or via an alternative service <xref target="ALTSVC" format="default" sectionFormat="of" derivedContent="ALTSVC"/>.
+

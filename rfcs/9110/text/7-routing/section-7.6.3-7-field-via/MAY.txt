@@ -1,0 +1,7 @@
+- section-7.6.3-7: 
+   A sender <bcp14>MAY</bcp14> generate comments to identify the
+   software of each recipient, analogous to the <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">User-Agent</xref> and
+   <xref target="field.server" format="none" sectionFormat="of" derivedContent="">Server</xref> header fields. However, comments in Via
+   are optional, and a recipient <bcp14>MAY</bcp14> remove them prior to forwarding the
+   message.
+

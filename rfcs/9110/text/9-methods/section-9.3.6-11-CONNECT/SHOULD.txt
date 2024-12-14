@@ -1,0 +1,10 @@
+- section-9.3.6-11: 
+   There are significant risks in establishing a tunnel to arbitrary servers,
+   particularly when the destination is a well-known or reserved TCP port that
+   is not intended for Web traffic. For example, a CONNECT to
+   "example.com:25" would suggest that the proxy connect to the reserved
+   port for SMTP traffic; if allowed, that could trick the proxy into
+   relaying spam email. Proxies that support CONNECT <bcp14>SHOULD</bcp14> restrict its
+   use to a limited set of known ports or a configurable list of safe
+   request targets.
+

@@ -1,0 +1,8 @@
+- section-10.2.4-6: 
+   An origin server <bcp14>SHOULD NOT</bcp14> generate a Server header field containing needlessly
+   fine-grained detail and <bcp14>SHOULD</bcp14> limit the addition of subproducts by third
+   parties. Overly long and detailed Server field values increase response
+   latency and potentially reveal internal implementation details that might
+   make it (slightly) easier for attackers to find and exploit known security
+   holes.
+

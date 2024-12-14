@@ -1,0 +1,7 @@
+- section-4.2.3-7: 
+   Two HTTP URIs that are equivalent after normalization (using any method)
+   can be assumed to identify the same resource, and any HTTP component <bcp14>MAY</bcp14>
+   perform normalization. As a result, distinct resources <bcp14>SHOULD NOT</bcp14> be
+   identified by HTTP URIs that are equivalent after normalization (using any
+   method defined in <xref target="URI" section="6.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc3986#section-6.2" derivedContent="URI"/>).
+

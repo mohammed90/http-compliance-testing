@@ -1,0 +1,7 @@
+- section-14.4-5: 
+   For byte ranges, a sender <bcp14>SHOULD</bcp14> indicate the complete length of the
+   representation from which the range has been extracted, unless the complete
+   length is unknown or difficult to determine. An asterisk character ("*") in
+   place of the complete-length indicates that the representation length was
+   unknown when the header field was generated.
+

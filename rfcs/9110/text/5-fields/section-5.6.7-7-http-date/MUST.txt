@@ -1,0 +1,6 @@
+- section-5.6.7-7: 
+   A recipient that parses a timestamp value in an HTTP field <bcp14>MUST</bcp14>
+   accept all three HTTP-date formats. When a sender generates a field
+   that contains one or more timestamps defined as HTTP-date,
+   the sender <bcp14>MUST</bcp14> generate those timestamps in the IMF-fixdate format.
+

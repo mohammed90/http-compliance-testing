@@ -1,0 +1,7 @@
+- section-7.8-14: 
+   A sender of Upgrade <bcp14>MUST</bcp14> also send an "Upgrade" connection option in the
+   <xref target="field.connection" format="none" sectionFormat="of" derivedContent="">Connection</xref> header field (<xref target="field.connection" format="default" sectionFormat="of" derivedContent="Section 7.6.1"/>)
+   to inform intermediaries not to forward this field.
+   A server that receives an Upgrade header field in an HTTP/1.0 request
+   <bcp14>MUST</bcp14> ignore that Upgrade field.
+

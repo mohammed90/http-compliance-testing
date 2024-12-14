@@ -1,0 +1,17 @@
+- section-15.3.7.3-5: 
+   The combined response content consists of the union of partial content
+   ranges within the new response and all of the matching stored responses.
+   If the union consists of the entire range of the representation, then the
+   client <bcp14>MUST</bcp14> process the combined response as if it were a complete
+   <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response, including a <xref target="field.content-length" format="none" sectionFormat="of" derivedContent="">Content-Length</xref>
+   header field that reflects the complete length.
+   Otherwise, the client <bcp14>MUST</bcp14> process the set of continuous ranges as one of
+   the following:
+   an incomplete <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response if the combined response is
+   a prefix of the representation,
+   a single <xref target="status.206" format="none" sectionFormat="of" derivedContent="">206 (Partial Content)</xref> response containing
+   "multipart/byteranges" content, or
+   multiple <xref target="status.206" format="none" sectionFormat="of" derivedContent="">206 (Partial Content)</xref> responses, each with one
+   continuous range that is indicated by a <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header
+   field.
+

@@ -1,0 +1,10 @@
+- section-15.6-1: 
+   The 5xx (Server Error) class of status code indicates that
+   the server is aware that it has erred or is incapable of performing the
+   requested method.
+   Except when responding to a HEAD request, the server <bcp14>SHOULD</bcp14> send a
+   representation containing an explanation of the error situation, and
+   whether it is a temporary or permanent condition.
+   A user agent <bcp14>SHOULD</bcp14> display any included representation to the user.
+   These status codes are applicable to any request method.
+

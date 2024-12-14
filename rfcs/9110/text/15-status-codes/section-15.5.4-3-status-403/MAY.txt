@@ -1,0 +1,6 @@
+- section-15.5.4-3: 
+   An origin server that wishes to "hide" the current existence of a forbidden
+   <xref target="target.resource" format="none" sectionFormat="of" derivedContent="">target resource</xref>
+            <bcp14>MAY</bcp14> instead respond with a status
+   code of <xref target="status.404" format="none" sectionFormat="of" derivedContent="">404 (Not Found)</xref>.
+

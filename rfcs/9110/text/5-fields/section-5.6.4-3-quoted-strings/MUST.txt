@@ -1,0 +1,7 @@
+- section-5.6.4-3: 
+  
+   The backslash octet ("\") can be used as a single-octet
+   quoting mechanism within quoted-string and comment constructs.
+   Recipients that process the value of a quoted-string <bcp14>MUST</bcp14> handle a
+   quoted-pair as if it were replaced by the octet following the backslash.
+

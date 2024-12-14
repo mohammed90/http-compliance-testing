@@ -1,0 +1,6 @@
+- section-14.2-4: 
+   A server <bcp14>MUST</bcp14> ignore a Range header field received with a request method
+   that is unrecognized or for which range handling is not defined. For this
+   specification, <xref target="GET" format="none" sectionFormat="of" derivedContent="">GET</xref> is the only method for which range handling
+   is defined.
+

@@ -1,0 +1,11 @@
+- section-2.4-1: 
+   A recipient <bcp14>MUST</bcp14> interpret a received protocol element according to the
+   semantics defined for it by this specification, including extensions to
+   this specification, unless the recipient has determined (through experience
+   or configuration) that the sender incorrectly implements what is implied by
+   those semantics.
+   For example, an origin server might disregard the contents of a received
+   <xref target="field.accept-encoding" format="none" sectionFormat="of" derivedContent="">Accept-Encoding</xref> header field if inspection of the
+   <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">User-Agent</xref> header field indicates a specific implementation
+   version that is known to fail on receipt of certain content codings.
+

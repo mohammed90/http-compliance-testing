@@ -1,0 +1,8 @@
+- section-8.6-10: 
+   Any Content-Length field value greater than or equal to zero is valid.
+   Since there is no predefined limit to the length of content, a
+   recipient <bcp14>MUST</bcp14> anticipate potentially large decimal numerals and
+   prevent parsing errors due to integer conversion overflows
+   or precision loss due to integer conversion
+   (<xref target="attack.protocol.element.length" format="default" sectionFormat="of" derivedContent="Section 17.5"/>).
+

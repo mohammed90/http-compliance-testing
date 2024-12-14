@@ -1,0 +1,7 @@
+- section-15.5.22-1: 
+   The 426 (Upgrade Required) status code indicates that the
+   server refuses to perform the request using the current protocol but might
+   be willing to do so after the client upgrades to a different protocol.
+   The server <bcp14>MUST</bcp14> send an <xref target="field.upgrade" format="none" sectionFormat="of" derivedContent="">Upgrade</xref> header field in a 426
+   response to indicate the required protocol(s) (<xref target="field.upgrade" format="default" sectionFormat="of" derivedContent="Section 7.8"/>).
+

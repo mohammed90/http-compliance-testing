@@ -1,0 +1,5 @@
+- section-14.2-5: 
+   An origin server <bcp14>MUST</bcp14> ignore a Range header field that contains a range
+   unit it does not understand. A proxy <bcp14>MAY</bcp14> discard a Range header
+   field that contains a range unit it does not understand.
+

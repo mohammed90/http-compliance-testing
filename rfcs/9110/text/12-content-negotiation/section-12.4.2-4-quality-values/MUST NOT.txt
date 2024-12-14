@@ -1,0 +1,5 @@
+- section-12.4.2-4: 
+   A sender of qvalue <bcp14>MUST NOT</bcp14> generate more than three digits after the
+   decimal point. User configuration of these values ought to be limited in
+   the same fashion.
+

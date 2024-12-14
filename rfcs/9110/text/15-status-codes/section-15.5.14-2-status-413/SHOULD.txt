@@ -1,0 +1,5 @@
+- section-15.5.14-2: 
+   If the condition is temporary, the server <bcp14>SHOULD</bcp14> generate a
+   <xref target="field.retry-after" format="none" sectionFormat="of" derivedContent="">Retry-After</xref> header field to indicate that it is temporary
+   and after what time the client <bcp14>MAY</bcp14> try again.
+

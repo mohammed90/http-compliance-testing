@@ -1,0 +1,9 @@
+- section-9.3.4-7: 
+   This extends to how header and trailer fields are stored; while common
+   header fields like <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> will typically be stored
+   and returned upon subsequent GET requests, header and trailer field
+   handling is specific to the resource that received the request. As a result,
+   an origin server <bcp14>SHOULD</bcp14> ignore unrecognized header and trailer fields
+   received in a PUT request (i.e., not save them as part of the resource
+   state).
+

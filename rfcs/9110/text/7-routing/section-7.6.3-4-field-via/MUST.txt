@@ -1,0 +1,7 @@
+- section-7.6.3-4: 
+   A proxy <bcp14>MUST</bcp14> send an appropriate Via header field, as described below, in
+   each message that it forwards.
+   An HTTP-to-HTTP gateway <bcp14>MUST</bcp14> send an appropriate Via header field in
+   each inbound request message and <bcp14>MAY</bcp14> send a Via header field in
+   forwarded response messages.
+

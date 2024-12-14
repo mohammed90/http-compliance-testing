@@ -1,0 +1,4 @@
+- section-10.1.1-16: 
+   The origin server <bcp14>MUST NOT</bcp14> wait for the content
+   before sending the <xref target="status.100" format="none" sectionFormat="of" derivedContent="">100 (Continue)</xref> response.
+

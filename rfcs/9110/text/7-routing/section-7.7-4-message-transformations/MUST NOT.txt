@@ -1,0 +1,8 @@
+- section-7.7-4: 
+   A proxy <bcp14>MUST NOT</bcp14> modify the "absolute-path" and "query" parts of the
+   received target URI when forwarding it to the next inbound server except
+   as required by that forwarding protocol. For example, a proxy forwarding
+   a request to an origin server via HTTP/1.1 will replace an empty path with
+   "/" (<xref target="HTTP11" section="3.2.1" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-3.2.1" derivedContent="HTTP/1.1"/>) or "*" (<xref target="HTTP11" section="3.2.4" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-3.2.4" derivedContent="HTTP/1.1"/>),
+   depending on the request method.
+

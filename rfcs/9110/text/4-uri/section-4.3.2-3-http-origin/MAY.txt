@@ -1,0 +1,8 @@
+- section-4.3.2-3: 
+   When an "http" URI is used within a context that calls for access to the
+   indicated resource, a client <bcp14>MAY</bcp14> attempt access by resolving the host
+   identifier to an IP address, establishing a TCP connection to that
+   address on the indicated port, and sending over that connection an HTTP
+   request message containing a request target that matches the client's
+   target URI (<xref target="target.resource" format="default" sectionFormat="of" derivedContent="Section 7.1"/>).
+

@@ -1,0 +1,9 @@
+- section-8.8.3-7: 
+   An entity tag can be either a weak or strong validator, with
+   strong being the default.  If an origin server provides an entity tag
+   for a representation and the generation of that entity tag does not satisfy
+   all of the characteristics of a strong validator
+   (<xref target="weak.and.strong.validators" format="default" sectionFormat="of" derivedContent="Section 8.8.1"/>), then the origin server
+   <bcp14>MUST</bcp14> mark the entity tag as weak by prefixing its opaque value
+   with "W/" (case-sensitive).
+

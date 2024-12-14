@@ -1,0 +1,9 @@
+- section-6.5.1-2: 
+   Many fields cannot be processed outside the header section because
+   their evaluation is necessary prior to receiving the content, such as
+   those that describe message framing, routing, authentication,
+   request modifiers, response controls, or content format.
+   A sender <bcp14>MUST NOT</bcp14> generate a trailer field unless the sender knows the
+   corresponding header field name's definition permits the field to be sent
+   in trailers.
+

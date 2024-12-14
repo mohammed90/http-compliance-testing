@@ -1,0 +1,9 @@
+- section-5.3-1: 
+   A recipient <bcp14>MAY</bcp14> combine multiple field lines within a field section that
+   have the same field name
+   into one field line, without changing the semantics of the message, by
+   appending each subsequent field line value to the initial field line value
+   in order, separated by a comma (",") and optional whitespace
+   (<xref target="whitespace" format="none" sectionFormat="of" derivedContent="">OWS</xref>, defined in <xref target="whitespace" format="default" sectionFormat="of" derivedContent="Section 5.6.3"/>).
+   For consistency, use comma SP.
+

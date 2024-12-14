@@ -1,0 +1,7 @@
+- section-8.6-8: 
+   A server <bcp14>MUST NOT</bcp14> send a Content-Length header field in any response
+   with a status code of
+   <xref target="status.1xx" format="none" sectionFormat="of" derivedContent="">1xx (Informational)</xref> or <xref target="status.204" format="none" sectionFormat="of" derivedContent="">204 (No Content)</xref>.
+   A server <bcp14>MUST NOT</bcp14> send a Content-Length header field in any
+   <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref> response to a CONNECT request (<xref target="CONNECT" format="default" sectionFormat="of" derivedContent="Section 9.3.6"/>).
+

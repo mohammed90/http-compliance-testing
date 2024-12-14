@@ -1,0 +1,7 @@
+- section-7.7-7: 
+   A proxy <bcp14>SHOULD NOT</bcp14> modify header fields that provide information about
+   the endpoints of the communication chain, the resource state, or the
+   <xref target="selected.representation" format="none" sectionFormat="of" derivedContent="">selected representation</xref> (other than the content) unless the field's
+   definition specifically allows such modification or the modification is
+   deemed necessary for privacy or security.
+

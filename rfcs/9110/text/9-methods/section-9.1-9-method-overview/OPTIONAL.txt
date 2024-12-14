@@ -1,0 +1,4 @@
+- section-9.1-9: 
+   All general-purpose servers <bcp14>MUST</bcp14> support the methods GET and HEAD.
+   All other methods are <bcp14>OPTIONAL</bcp14>.
+

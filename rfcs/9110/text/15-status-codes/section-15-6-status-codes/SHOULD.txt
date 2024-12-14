@@ -1,0 +1,7 @@
+- section-15-6: 
+   Values outside the range 100..599 are invalid. Implementations often use
+   three-digit integer values outside of that range (i.e., 600..999) for
+   internal communication of non-HTTP status (e.g., library errors). A client
+   that receives a response with an invalid status code <bcp14>SHOULD</bcp14> process the
+   response as if it had a <xref target="status.5xx" format="none" sectionFormat="of" derivedContent="">5xx (Server Error)</xref> status code.
+

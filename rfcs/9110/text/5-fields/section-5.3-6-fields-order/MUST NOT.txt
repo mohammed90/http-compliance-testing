@@ -1,0 +1,6 @@
+- section-5.3-6: 
+   A server <bcp14>MUST NOT</bcp14> apply a request to the target resource until it
+   receives the entire request header section, since later header field lines
+   might include conditionals, authentication credentials, or deliberately
+   misleading duplicate header fields that could impact request processing.
+

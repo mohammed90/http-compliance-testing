@@ -1,0 +1,5 @@
+- section-10.1.4-6: 
+   A sender of TE <bcp14>MUST</bcp14> also send a "TE" connection option within the
+   <xref target="field.connection" format="none" sectionFormat="of" derivedContent="">Connection</xref> header field (<xref target="field.connection" format="default" sectionFormat="of" derivedContent="Section 7.6.1"/>)
+   to inform intermediaries not to forward this field.
+

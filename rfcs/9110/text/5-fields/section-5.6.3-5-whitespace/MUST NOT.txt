@@ -1,0 +1,6 @@
+- section-5.6.3-5: 
+   The BWS rule is used where the grammar allows optional whitespace only for
+   historical reasons. A sender <bcp14>MUST NOT</bcp14> generate BWS in messages.
+   A recipient <bcp14>MUST</bcp14> parse for such bad whitespace and remove it before
+   interpreting the protocol element.
+

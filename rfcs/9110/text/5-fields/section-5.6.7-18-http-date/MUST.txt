@@ -1,0 +1,6 @@
+- section-5.6.7-18: 
+   Recipients of a timestamp value in rfc850-date format, which uses a
+   two-digit year, <bcp14>MUST</bcp14> interpret a timestamp that appears to be more
+   than 50 years in the future as representing the most recent year in the
+   past that had the same last two digits.
+

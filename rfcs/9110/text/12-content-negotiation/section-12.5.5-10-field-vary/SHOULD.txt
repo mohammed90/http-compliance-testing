@@ -1,0 +1,9 @@
+- section-12.5.5-10: 
+   An origin server <bcp14>SHOULD</bcp14> generate a Vary header field on a cacheable
+   response when it wishes that response to be selectively reused for
+   subsequent requests. Generally, that is the case when the response
+   content has been tailored to better fit the preferences expressed by
+   those selecting header fields, such as when an origin server has
+   selected the response's language based on the request's
+   <xref target="field.accept-language" format="none" sectionFormat="of" derivedContent="">Accept-Language</xref> header field.
+

@@ -1,0 +1,3 @@
+- section-15.5.20-3: 
+   A proxy <bcp14>MUST NOT</bcp14> generate a 421 response.
+

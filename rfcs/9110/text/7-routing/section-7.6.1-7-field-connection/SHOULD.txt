@@ -1,0 +1,5 @@
+- section-7.6.1-7: 
+   Furthermore, intermediaries <bcp14>SHOULD</bcp14> remove or replace fields
+   that are known to require removal before forwarding, whether or not they appear as a
+   connection-option, after applying those fields' semantics. This includes but is not limited to:
+

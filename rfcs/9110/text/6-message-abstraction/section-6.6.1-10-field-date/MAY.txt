@@ -1,0 +1,7 @@
+- section-6.6.1-10: 
+   A user agent <bcp14>MAY</bcp14> send a Date header field in a request, though generally
+   will not do so unless it is believed to convey useful information to the
+   server. For example, custom applications of HTTP might convey a Date if
+   the server is expected to adjust its interpretation of the user's request
+   based on differences between the user agent and server clocks.
+

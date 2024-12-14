@@ -1,0 +1,11 @@
+- section-14.2-11: 
+   If all of the preconditions are true, the server supports the Range header
+   field for the target resource, the received Range field-value contains a
+   valid <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> with a <xref target="range.units" format="none" sectionFormat="of" derivedContent="">range-unit</xref>
+   supported for that target resource, and that
+   <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> is <xref target="satisfiable" format="none" sectionFormat="of" derivedContent="">satisfiable</xref> with respect
+   to the selected representation,
+   the server <bcp14>SHOULD</bcp14> send a <xref target="status.206" format="none" sectionFormat="of" derivedContent="">206 (Partial Content)</xref> response
+   with content containing one or more partial representations
+   that correspond to the satisfiable <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">range-spec</xref>(s) requested.
+

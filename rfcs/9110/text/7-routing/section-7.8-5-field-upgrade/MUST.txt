@@ -1,0 +1,11 @@
+- section-7.8-5: 
+   A server that sends a <xref target="status.101" format="none" sectionFormat="of" derivedContent="">101 (Switching Protocols)</xref> response
+   <bcp14>MUST</bcp14> send an Upgrade header field to indicate the new protocol(s) to
+   which the connection is being switched; if multiple protocol layers are
+   being switched, the sender <bcp14>MUST</bcp14> list the protocols in layer-ascending
+   order. A server <bcp14>MUST NOT</bcp14> switch to a protocol that was not indicated by
+   the client in the corresponding request's Upgrade header field.
+   A server <bcp14>MAY</bcp14> choose to ignore the order of preference indicated by the
+   client and select the new protocol(s) based on other factors, such as the
+   nature of the request or the current load on the server.
+

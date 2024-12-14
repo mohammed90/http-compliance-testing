@@ -1,0 +1,7 @@
+- section-6.2-6: 
+   A client <bcp14>MAY</bcp14> send a lower request version if it is known that
+   the server incorrectly implements the HTTP specification, but only
+   after the client has attempted at least one normal request and determined
+   from the response status code or header fields (e.g., <xref target="field.server" format="none" sectionFormat="of" derivedContent="">Server</xref>) that
+   the server improperly handles higher request versions.
+

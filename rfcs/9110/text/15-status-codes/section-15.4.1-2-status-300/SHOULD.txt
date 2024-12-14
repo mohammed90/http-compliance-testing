@@ -1,0 +1,6 @@
+- section-15.4.1-2: 
+   If the server has a preferred choice, the server <bcp14>SHOULD</bcp14> generate a
+   <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field containing a preferred choice's URI
+   reference. The user agent <bcp14>MAY</bcp14> use the Location field value for automatic
+   redirection.
+

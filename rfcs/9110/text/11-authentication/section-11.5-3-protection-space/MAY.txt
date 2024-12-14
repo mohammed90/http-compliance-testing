@@ -1,0 +1,8 @@
+- section-11.5-3: 
+   The protection space determines the domain over which credentials can
+   be automatically applied. If a prior request has been authorized, the
+   user agent <bcp14>MAY</bcp14> reuse the same credentials for all other requests within
+   that protection space for a period of time determined by the authentication
+   scheme, parameters, and/or user preferences (such as a configurable
+   inactivity timeout).
+

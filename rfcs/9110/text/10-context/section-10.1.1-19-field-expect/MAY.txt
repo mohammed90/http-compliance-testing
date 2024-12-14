@@ -1,0 +1,6 @@
+- section-10.1.1-19: 
+   If the proxy believes (from configuration or past interaction) that the
+   next inbound server only supports HTTP/1.0, the proxy <bcp14>MAY</bcp14> generate an
+   immediate <xref target="status.100" format="none" sectionFormat="of" derivedContent="">100 (Continue)</xref> response to encourage the client to
+   begin sending the content.
+

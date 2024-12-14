@@ -1,0 +1,10 @@
+- section-9.3.7-4: 
+   A server generating a successful response to OPTIONS <bcp14>SHOULD</bcp14> send any
+   header that might indicate optional features implemented by the
+   server and applicable to the target resource (e.g., <xref target="field.allow" format="none" sectionFormat="of" derivedContent="">Allow</xref>),
+   including potential extensions not defined by this specification.
+   The response content, if any, might also describe the communication options
+   in a machine or human-readable representation. A standard format for such a
+   representation is not defined by this specification, but might be defined by
+   future extensions to HTTP.
+

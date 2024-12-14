@@ -1,0 +1,9 @@
+- section-8.3.1-4: 
+   The type/subtype <bcp14>MAY</bcp14> be followed by semicolon-delimited parameters
+   (<xref target="parameter" format="default" sectionFormat="of" derivedContent="Section 5.6.6"/>) in the form of name/value pairs.
+   The presence or absence of a parameter might be significant to the
+   processing of a media type, depending on its definition within the media
+   type registry.
+   Parameter values might or might not be case-sensitive, depending on the
+   semantics of the parameter name.
+

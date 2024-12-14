@@ -1,0 +1,6 @@
+- section-9.3.7-6: 
+   A client that generates an OPTIONS request containing content
+   <bcp14>MUST</bcp14> send a valid <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> header field describing
+   the representation media type. Note that this specification does not define
+   any use for such content.
+

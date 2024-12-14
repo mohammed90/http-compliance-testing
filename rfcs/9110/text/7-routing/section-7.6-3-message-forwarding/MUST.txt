@@ -1,0 +1,6 @@
+- section-7.6-3: 
+   An intermediary not acting as a tunnel <bcp14>MUST</bcp14> implement the
+   <xref target="field.connection" format="none" sectionFormat="of" derivedContent="">Connection</xref> header field, as specified in
+   <xref target="field.connection" format="default" sectionFormat="of" derivedContent="Section 7.6.1"/>, and exclude fields from being forwarded
+   that are only intended for the incoming connection.
+

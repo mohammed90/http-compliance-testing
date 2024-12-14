@@ -1,0 +1,9 @@
+- section-6.2-7: 
+   A server <bcp14>SHOULD</bcp14> send a response version equal to the highest version to
+   which the server is conformant that has a major version less than or equal
+   to the one received in the request.
+   A server <bcp14>MUST NOT</bcp14> send a version to which it is not conformant.
+   A server can send a <xref target="status.505" format="none" sectionFormat="of" derivedContent="">505 (HTTP Version Not Supported)</xref>
+   response if it wishes, for any reason, to refuse service of the client's
+   major protocol version.
+

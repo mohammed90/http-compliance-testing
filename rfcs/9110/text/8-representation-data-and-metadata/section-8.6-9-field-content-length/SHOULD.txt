@@ -1,0 +1,8 @@
+- section-8.6-9: 
+   Aside from the cases defined above, in the absence of Transfer-Encoding,
+   an origin server <bcp14>SHOULD</bcp14> send a Content-Length header field when the
+   content size is known prior to sending the complete header section.
+   This will allow downstream recipients to measure transfer progress,
+   know when a received message is complete, and potentially reuse the
+   connection for additional requests.
+

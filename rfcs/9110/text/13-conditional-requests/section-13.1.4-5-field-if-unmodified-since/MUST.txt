@@ -1,0 +1,8 @@
+- section-13.1.4-5: 
+   A recipient <bcp14>MUST</bcp14> ignore If-Unmodified-Since if the request contains an
+   <xref target="field.if-match" format="none" sectionFormat="of" derivedContent="">If-Match</xref> header field; the condition in
+   <xref target="field.if-match" format="none" sectionFormat="of" derivedContent="">If-Match</xref> is considered to be a more accurate replacement for
+   the condition in If-Unmodified-Since, and the two are only combined for the
+   sake of interoperating with older intermediaries that might not implement
+   <xref target="field.if-match" format="none" sectionFormat="of" derivedContent="">If-Match</xref>.
+

@@ -1,0 +1,6 @@
+- section-7.6.1-9: 
+   A sender <bcp14>MUST NOT</bcp14> send a connection option corresponding to a
+   field that is intended for all recipients of the content.
+   For example, Cache-Control is never appropriate as a
+   connection option (<xref target="CACHING" section="5.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2" derivedContent="CACHING"/>).
+

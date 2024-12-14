@@ -1,0 +1,7 @@
+- section-6.5.2-3: 
+   At the end of a message, a recipient <bcp14>MAY</bcp14> treat the set of received
+   trailer fields as a data structure of name/value pairs, similar to (but
+   separate from) the header fields. Additional processing expectations, if
+   any, can be defined within the field specification for a field intended
+   for use in trailers.
+

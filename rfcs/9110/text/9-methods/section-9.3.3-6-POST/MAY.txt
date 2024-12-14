@@ -1,0 +1,10 @@
+- section-9.3.3-6: 
+   If the result of processing a POST would be equivalent to a representation
+   of an existing resource, an origin server <bcp14>MAY</bcp14> redirect the user agent to
+   that resource by sending a <xref target="status.303" format="none" sectionFormat="of" derivedContent="">303 (See Other)</xref> response with the
+   existing resource's identifier in the <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> field.
+   This has the benefits of providing the user agent a resource identifier
+   and transferring the representation via a method more amenable to shared
+   caching, though at the cost of an extra request if the user agent does not
+   already have the representation cached.
+

@@ -1,0 +1,8 @@
+- section-15.5.7-2: 
+   The server <bcp14>SHOULD</bcp14> generate content containing a list of available
+   representation characteristics and corresponding resource identifiers from
+   which the user or user agent can choose the one most appropriate.
+   A user agent <bcp14>MAY</bcp14> automatically select the most appropriate choice from
+   that list. However, this specification does not define any standard for
+   such automatic selection, as described in <xref target="status.300" format="default" sectionFormat="of" derivedContent="Section 15.4.1"/>.
+

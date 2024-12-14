@@ -1,0 +1,5 @@
+- section-15.3.7.3-2: 
+   A client that has received multiple partial responses to GET requests on a
+   target resource <bcp14>MAY</bcp14> combine those responses into a larger continuous
+   range if they share the same strong validator.
+

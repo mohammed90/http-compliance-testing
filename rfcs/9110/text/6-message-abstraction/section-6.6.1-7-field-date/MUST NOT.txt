@@ -1,0 +1,3 @@
+- section-6.6.1-7: 
+   An origin server without a clock <bcp14>MUST NOT</bcp14> generate a Date header field.
+

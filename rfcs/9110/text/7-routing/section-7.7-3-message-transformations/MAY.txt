@@ -1,0 +1,6 @@
+- section-7.7-3: 
+   If a proxy receives a target URI with a host name that is not a
+   fully qualified domain name, it <bcp14>MAY</bcp14> add its own domain to the host name
+   it received when forwarding the request.  A proxy <bcp14>MUST NOT</bcp14> change the
+   host name if the target URI contains a fully qualified domain name.
+

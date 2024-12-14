@@ -1,0 +1,8 @@
+- section-2.3-3: 
+   At a minimum, a recipient <bcp14>MUST</bcp14> be able to parse and process protocol
+   element lengths that are at least as long as the values that it generates
+   for those same protocol elements in other messages. For example, an origin
+   server that publishes very long URI references to its own resources needs
+   to be able to parse and process those same references when received as a
+   target URI.
+

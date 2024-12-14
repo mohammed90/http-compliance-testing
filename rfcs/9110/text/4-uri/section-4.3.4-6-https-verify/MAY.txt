@@ -1,0 +1,10 @@
+- section-4.3.4-6: 
+   If the certificate is not valid for the target URI's origin,
+   a user agent <bcp14>MUST</bcp14> either obtain confirmation from the user
+   before proceeding (see <xref target="user.agent" format="default" sectionFormat="of" derivedContent="Section 3.5"/>) or
+   terminate the connection with a bad certificate error. Automated
+   clients <bcp14>MUST</bcp14> log the error to an appropriate audit log (if available)
+   and <bcp14>SHOULD</bcp14> terminate the connection (with a bad certificate error).
+   Automated clients <bcp14>MAY</bcp14> provide a configuration setting that disables
+   this check, but <bcp14>MUST</bcp14> provide a setting which enables it.
+

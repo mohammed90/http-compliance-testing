@@ -1,0 +1,8 @@
+- section-10.2.1-5: 
+   The actual set of allowed methods is defined by the origin server at the
+   time of each request. An origin server <bcp14>MUST</bcp14> generate an Allow header field in a
+   <xref target="status.405" format="none" sectionFormat="of" derivedContent="">405 (Method Not Allowed)</xref> response and <bcp14>MAY</bcp14> do so in any
+   other response. An empty Allow field value indicates that the resource
+   allows no methods, which might occur in a 405 response if the resource has
+   been temporarily disabled by configuration.
+

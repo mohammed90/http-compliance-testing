@@ -1,0 +1,9 @@
+- section-15.3.7.2-2: 
+   Within the header area of each body part in the multipart content, the
+   server <bcp14>MUST</bcp14> generate a <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header field
+   corresponding to the range being enclosed in that body part.
+   If the selected representation would have had a <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref>
+   header field in a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response, the server <bcp14>SHOULD</bcp14>
+   generate that same <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> header field in the header area of
+   each body part. For example:
+

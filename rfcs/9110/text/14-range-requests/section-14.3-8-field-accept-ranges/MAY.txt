@@ -1,0 +1,4 @@
+- section-14.3-8: 
+   A server that does not support any kind of range request for the target
+   resource <bcp14>MAY</bcp14> send
+

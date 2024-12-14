@@ -1,0 +1,5 @@
+- section-10.2.1-6: 
+   A proxy <bcp14>MUST NOT</bcp14> modify the Allow header field -- it does not need
+   to understand all of the indicated methods in order to handle them
+   according to the generic message handling rules.
+

@@ -1,0 +1,9 @@
+- section-12.5.5-9.1.1: 
+       To inform cache recipients that they <bcp14>MUST NOT</bcp14> use this response
+       to satisfy a later request unless the later request has the
+       same values for the listed header fields as the original request
+       (<xref target="CACHING" section="4.1" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-4.1" derivedContent="CACHING"/>) or reuse of the
+       response has been validated by the origin server.
+       In other words, Vary expands the cache key
+       required to match a new request to the stored cache entry.
+              

@@ -1,0 +1,7 @@
+- section-15-4: 
+   HTTP status codes are extensible. A client is not required to understand
+   the meaning of all registered status codes, though such understanding is
+   obviously desirable. However, a client <bcp14>MUST</bcp14> understand the class of any
+   status code, as indicated by the first digit, and treat an unrecognized
+   status code as being equivalent to the x00 status code of that class.
+

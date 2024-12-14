@@ -1,0 +1,9 @@
+- section-5.1-6: 
+   A proxy <bcp14>MUST</bcp14> forward unrecognized header fields unless the
+   field name is listed in the <xref target="field.connection" format="none" sectionFormat="of" derivedContent="">Connection</xref> header field
+   (<xref target="field.connection" format="default" sectionFormat="of" derivedContent="Section 7.6.1"/>) or the proxy is specifically
+   configured to block, or otherwise transform, such fields.
+   Other recipients <bcp14>SHOULD</bcp14> ignore unrecognized header and trailer fields.
+   Adhering to these requirements allows HTTP's functionality to be extended
+   without updating or removing deployed intermediaries.
+

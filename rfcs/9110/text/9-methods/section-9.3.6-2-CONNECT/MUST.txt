@@ -1,0 +1,8 @@
+- section-9.3.6-2: 
+   CONNECT uses a special form of request target, unique to this method,
+   consisting of only the host and port number of the tunnel destination,
+   separated by a colon. There is no default port; a client <bcp14>MUST</bcp14> send the
+   port number even if the CONNECT request is based on a URI reference that
+   contains an authority component with an elided port
+   (<xref target="uri.references" format="default" sectionFormat="of" derivedContent="Section 4.1"/>). For example,
+

@@ -1,0 +1,9 @@
+- section-10.1.5-5: 
+   A sender <bcp14>SHOULD</bcp14> limit generated product identifiers to what is necessary
+   to identify the product; a sender <bcp14>MUST NOT</bcp14> generate advertising or other
+   nonessential information within the product identifier.
+   A sender <bcp14>SHOULD NOT</bcp14> generate information in <xref target="field.user-agent" format="none" sectionFormat="of" derivedContent="">product-version</xref>
+   that is not a version identifier (i.e., successive versions of the same
+   product name ought to differ only in the product-version portion of the
+   product identifier).
+

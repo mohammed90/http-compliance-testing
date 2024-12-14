@@ -1,0 +1,12 @@
+- section-9.3.4-10: 
+   Proper interpretation of a PUT request presumes that the user agent knows
+   which target resource is desired. A service that selects a proper URI on
+   behalf of the client, after receiving a state-changing request, <bcp14>SHOULD</bcp14> be
+   implemented using the POST method rather than PUT. If the origin server
+   will not make the requested PUT state change to the target resource and
+   instead wishes to have it applied to a different resource, such as when the
+   resource has been moved to a different URI, then the origin server <bcp14>MUST</bcp14>
+   send an appropriate <xref target="status.3xx" format="none" sectionFormat="of" derivedContent="">3xx (Redirection)</xref> response; the
+   user agent <bcp14>MAY</bcp14> then make its own decision regarding whether or not to
+   redirect the request.
+

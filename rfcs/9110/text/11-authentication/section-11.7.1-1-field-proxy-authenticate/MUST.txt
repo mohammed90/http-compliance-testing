@@ -1,0 +1,8 @@
+- section-11.7.1-1: 
+   The "Proxy-Authenticate" header field consists of at least one
+   challenge that indicates the authentication scheme(s) and parameters
+   applicable to the proxy for this request.
+   A proxy <bcp14>MUST</bcp14> send at least one Proxy-Authenticate header field in
+   each <xref target="status.407" format="none" sectionFormat="of" derivedContent="">407 (Proxy Authentication Required)</xref> response that it
+   generates.
+

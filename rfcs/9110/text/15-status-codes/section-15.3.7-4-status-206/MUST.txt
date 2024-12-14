@@ -1,0 +1,9 @@
+- section-15.3.7-4: 
+   A server that generates a 206 response <bcp14>MUST</bcp14> generate the following
+   header fields, in addition to those required in the subsections below,
+   if the field would
+   have been sent in a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response to the same request:
+   <xref target="field.date" format="none" sectionFormat="of" derivedContent="">Date</xref>, Cache-Control, <xref target="field.etag" format="none" sectionFormat="of" derivedContent="">ETag</xref>,
+   Expires, <xref target="field.content-location" format="none" sectionFormat="of" derivedContent="">Content-Location</xref>, and
+   <xref target="field.vary" format="none" sectionFormat="of" derivedContent="">Vary</xref>.
+

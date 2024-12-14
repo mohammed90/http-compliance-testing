@@ -1,0 +1,5 @@
+- section-7.8-7: 
+   A server <bcp14>MAY</bcp14> send an Upgrade header field in any other response to
+   advertise that it implements support for upgrading to the listed protocols,
+   in order of descending preference, when appropriate for a future request.
+

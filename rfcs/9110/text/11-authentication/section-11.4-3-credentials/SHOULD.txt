@@ -1,0 +1,8 @@
+- section-11.4-3: 
+   Upon receipt of a request for a protected resource that omits credentials,
+   contains invalid credentials (e.g., a bad password) or partial credentials
+   (e.g., when the authentication scheme requires more than one round trip),
+   an origin server <bcp14>SHOULD</bcp14> send a <xref target="status.401" format="none" sectionFormat="of" derivedContent="">401 (Unauthorized)</xref> response
+   that contains a <xref target="field.www-authenticate" format="none" sectionFormat="of" derivedContent="">WWW-Authenticate</xref> header field with at least
+   one (possibly new) challenge applicable to the requested resource.
+

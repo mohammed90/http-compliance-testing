@@ -1,0 +1,9 @@
+- section-8.7-9: 
+   An origin server that receives a Content-Location field in a request
+   message <bcp14>MUST</bcp14> treat the information as transitory request context rather
+   than as metadata to be saved verbatim as part of the representation.
+   An origin server <bcp14>MAY</bcp14> use that context to guide in processing the
+   request or to save it for other uses, such as within source links or
+   versioning metadata. However, an origin server <bcp14>MUST NOT</bcp14> use such context
+   information to alter the request semantics.
+

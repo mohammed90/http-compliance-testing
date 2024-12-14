@@ -1,0 +1,9 @@
+- section-7.8-15: 
+   A client cannot begin using an upgraded protocol on the connection until
+   it has completely sent the request message (i.e., the client can't change
+   the protocol it is sending in the middle of a message).
+   If a server receives both an Upgrade and an <xref target="field.expect" format="none" sectionFormat="of" derivedContent="">Expect</xref> header field
+   with the "100-continue" expectation (<xref target="field.expect" format="default" sectionFormat="of" derivedContent="Section 10.1.1"/>), the
+   server <bcp14>MUST</bcp14> send a <xref target="status.100" format="none" sectionFormat="of" derivedContent="">100 (Continue)</xref> response before sending
+   a <xref target="status.101" format="none" sectionFormat="of" derivedContent="">101 (Switching Protocols)</xref> response.
+

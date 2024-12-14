@@ -1,0 +1,10 @@
+- section-14.4-10: 
+   A Content-Range field value is invalid if it contains a
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">range-resp</xref> that has a <xref target="rule.int-range" format="none" sectionFormat="of" derivedContent="">last-pos</xref>
+   value less than its <xref target="rule.int-range" format="none" sectionFormat="of" derivedContent="">first-pos</xref> value, or a
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">complete-length</xref> value less than or equal to its
+   <xref target="rule.int-range" format="none" sectionFormat="of" derivedContent="">last-pos</xref> value. The recipient of an invalid
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref>
+          <bcp14>MUST NOT</bcp14> attempt to recombine the received
+   content with a stored representation.
+

@@ -1,0 +1,8 @@
+- section-8.8.2.1-1: 
+   An origin server <bcp14>SHOULD</bcp14> send Last-Modified for any selected
+   representation for which a last modification date can be reasonably
+   and consistently determined, since its use in conditional requests
+   and evaluating cache freshness (<xref target="CACHING" format="default" sectionFormat="of" derivedContent="CACHING"/>) can
+   substantially reduce unnecessary transfers and significantly
+   improve service availability and scalability.
+

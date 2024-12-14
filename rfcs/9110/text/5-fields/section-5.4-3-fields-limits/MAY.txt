@@ -1,0 +1,6 @@
+- section-5.4-3: 
+   A client <bcp14>MAY</bcp14> discard or truncate received field lines that are larger
+   than the client wishes to process if the field semantics are such that the
+   dropped value(s) can be safely ignored without changing the
+   message framing or response semantics.
+

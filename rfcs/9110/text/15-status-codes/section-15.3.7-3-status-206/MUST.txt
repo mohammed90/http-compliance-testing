@@ -1,0 +1,5 @@
+- section-15.3.7-3: 
+   A client <bcp14>MUST</bcp14> inspect a 206 response's <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> and
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> field(s) to determine what parts are enclosed
+   and whether additional requests are needed.
+

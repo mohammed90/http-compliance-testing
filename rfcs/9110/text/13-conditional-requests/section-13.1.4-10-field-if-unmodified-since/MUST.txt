@@ -1,0 +1,7 @@
+- section-13.1.4-10: 
+   When an origin server receives a request that selects a representation
+   and that request includes an If-Unmodified-Since header field without
+   an <xref target="field.if-match" format="none" sectionFormat="of" derivedContent="">If-Match</xref> header field,
+   the origin server <bcp14>MUST</bcp14> evaluate the If-Unmodified-Since condition per
+   <xref target="evaluation" format="default" sectionFormat="of" derivedContent="Section 13.2"/> prior to performing the method.
+

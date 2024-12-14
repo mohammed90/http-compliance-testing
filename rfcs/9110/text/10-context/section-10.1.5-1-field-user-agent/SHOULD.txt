@@ -1,0 +1,9 @@
+- section-10.1.5-1: 
+   The "User-Agent" header field contains information about the user agent
+   originating the request, which is often used by servers to help identify
+   the scope of reported interoperability problems, to work around or tailor
+   responses to avoid particular user agent limitations, and for analytics
+   regarding browser or operating system use. A user agent <bcp14>SHOULD</bcp14> send
+   a User-Agent header field in each request unless specifically configured not
+   to do so.
+

@@ -1,0 +1,7 @@
+- section-6.2-5: 
+   A client <bcp14>SHOULD</bcp14> send a request version equal to the highest
+   version to which the client is conformant and
+   whose major version is no higher than the highest version supported
+   by the server, if this is known.  A client <bcp14>MUST NOT</bcp14> send a
+   version to which it is not conformant.
+

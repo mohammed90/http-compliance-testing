@@ -1,0 +1,7 @@
+- section-9.3.7-5: 
+   A client <bcp14>MAY</bcp14> send a <xref target="field.max-forwards" format="none" sectionFormat="of" derivedContent="">Max-Forwards</xref> header field in an
+   OPTIONS request to target a specific recipient in the request chain (see
+   <xref target="field.max-forwards" format="default" sectionFormat="of" derivedContent="Section 7.6.2"/>). A proxy <bcp14>MUST NOT</bcp14> generate a
+   Max-Forwards header field while forwarding a request unless that request
+   was received with a Max-Forwards field.
+

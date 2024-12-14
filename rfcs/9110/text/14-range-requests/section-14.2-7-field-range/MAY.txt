@@ -1,0 +1,5 @@
+- section-14.2-7: 
+   A server that supports range requests <bcp14>MAY</bcp14> ignore a <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref>
+   header field when the selected representation has no content
+   (i.e., the selected representation's data is of zero length).
+

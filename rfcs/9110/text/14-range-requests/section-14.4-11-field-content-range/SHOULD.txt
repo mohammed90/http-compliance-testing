@@ -1,0 +1,5 @@
+- section-14.4-11: 
+   A server generating a <xref target="status.416" format="none" sectionFormat="of" derivedContent="">416 (Range Not Satisfiable)</xref> response
+   to a byte-range request <bcp14>SHOULD</bcp14> send a Content-Range header field with an
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">unsatisfied-range</xref> value, as in the following example:
+

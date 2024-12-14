@@ -1,0 +1,5 @@
+- section-14.3-6: 
+   A client <bcp14>MAY</bcp14> generate range requests regardless of having received an
+   Accept-Ranges field. The information only provides advice for the sake of
+   improving performance and reducing unnecessary network transfers.
+

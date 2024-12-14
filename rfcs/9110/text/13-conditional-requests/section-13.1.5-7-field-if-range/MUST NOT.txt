@@ -1,0 +1,8 @@
+- section-13.1.5-7: 
+   A client <bcp14>MUST NOT</bcp14> generate an If-Range header field containing an
+   entity tag that is marked as weak.
+   A client <bcp14>MUST NOT</bcp14> generate an If-Range header field containing an
+   <xref target="http.date" format="none" sectionFormat="of" derivedContent="">HTTP-date</xref> unless the client has no entity tag for
+   the corresponding representation and the date is a strong validator
+   in the sense defined by <xref target="lastmod.comparison" format="default" sectionFormat="of" derivedContent="Section 8.8.2.2"/>.
+

@@ -1,0 +1,12 @@
+- section-15.3.7.3-4: 
+   If the most recent response is a <xref target="status.206" format="none" sectionFormat="of" derivedContent="">206 (Partial Content)</xref>
+   response and at least one of the matching stored responses is a
+   <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref>, then the combined response header fields consist
+   of the most recent 200 response's header fields. If all of the matching
+   stored responses are 206 responses, then the stored response with the most
+   recent header fields is used as the source of header fields for the
+   combined response, except that the client <bcp14>MUST</bcp14> use other header fields
+   provided in the new response, aside from <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref>, to
+   replace all instances of the corresponding header fields in the stored
+   response.
+

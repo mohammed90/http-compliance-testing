@@ -1,0 +1,10 @@
+- section-11.7.2-3: 
+   Unlike <xref target="field.authorization" format="none" sectionFormat="of" derivedContent="">Authorization</xref>, the Proxy-Authorization header field
+   applies only to the next inbound proxy that demanded authentication using
+   the <xref target="field.proxy-authenticate" format="none" sectionFormat="of" derivedContent="">Proxy-Authenticate</xref> header field. When multiple proxies are used
+   in a chain, the Proxy-Authorization header field is consumed by the first
+   inbound proxy that was expecting to receive credentials. A proxy <bcp14>MAY</bcp14>
+   relay the credentials from the client request to the next proxy if that is
+   the mechanism by which the proxies cooperatively authenticate a given
+   request.
+

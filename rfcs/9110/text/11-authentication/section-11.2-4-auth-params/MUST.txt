@@ -1,0 +1,5 @@
+- section-11.2-4: 
+   Authentication parameters are name/value pairs, where the name token is
+   matched case-insensitively
+   and each parameter name <bcp14>MUST</bcp14> only occur once per challenge.
+

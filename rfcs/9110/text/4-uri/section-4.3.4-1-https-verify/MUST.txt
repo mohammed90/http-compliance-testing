@@ -1,0 +1,8 @@
+- section-4.3.4-1: 
+   To establish a <xref target="https.uri" format="none" sectionFormat="of" derivedContent="">secured</xref> connection to dereference a URI,
+   a client <bcp14>MUST</bcp14> verify that the service's identity is an acceptable
+   match for the URI's origin server. Certificate verification is used to
+   prevent server impersonation by an on-path attacker or by an attacker
+   that controls name resolution. This process requires that a client be
+   configured with a set of trust anchors.
+

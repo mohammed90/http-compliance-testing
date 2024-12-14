@@ -1,0 +1,5 @@
+- section-13.1.4-6: 
+   A recipient <bcp14>MUST</bcp14> ignore the If-Unmodified-Since header field if the
+   received field value is not a valid HTTP-date (including when the field
+   value appears to be a list of dates).
+

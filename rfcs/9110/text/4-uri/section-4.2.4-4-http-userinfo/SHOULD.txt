@@ -1,0 +1,6 @@
+- section-4.2.4-4: 
+   Before making use of an "http" or "https" URI reference received from an untrusted
+   source, a recipient <bcp14>SHOULD</bcp14> parse for userinfo and treat its presence as
+   an error; it is likely being used to obscure the authority for the sake of
+   phishing attacks.
+

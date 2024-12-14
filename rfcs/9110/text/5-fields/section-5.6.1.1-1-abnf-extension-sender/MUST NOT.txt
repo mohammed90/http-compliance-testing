@@ -1,0 +1,5 @@
+- section-5.6.1.1-1: 
+   In any production that uses the list construct, a sender <bcp14>MUST NOT</bcp14>
+   generate empty list elements. In other words, a sender has to generate
+   lists that satisfy the following syntax:
+

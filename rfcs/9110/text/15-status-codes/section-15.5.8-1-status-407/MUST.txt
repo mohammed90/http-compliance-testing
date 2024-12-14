@@ -1,0 +1,10 @@
+- section-15.5.8-1: 
+   The 407 (Proxy Authentication Required) status code is
+   similar to <xref target="status.401" format="none" sectionFormat="of" derivedContent="">401 (Unauthorized)</xref>, but it indicates that the client
+   needs to authenticate itself in order to use a proxy for this request.
+   The proxy <bcp14>MUST</bcp14> send a <xref target="field.proxy-authenticate" format="none" sectionFormat="of" derivedContent="">Proxy-Authenticate</xref> header field
+   (<xref target="field.proxy-authenticate" format="default" sectionFormat="of" derivedContent="Section 11.7.1"/>) containing a challenge
+   applicable to that proxy for the request. The client <bcp14>MAY</bcp14> repeat
+   the request with a new or replaced <xref target="field.proxy-authorization" format="none" sectionFormat="of" derivedContent="">Proxy-Authorization</xref>
+   header field (<xref target="field.proxy-authorization" format="default" sectionFormat="of" derivedContent="Section 11.7.2"/>).
+

@@ -1,0 +1,4 @@
+- section-11.6.1-4: 
+   A proxy forwarding a response <bcp14>MUST NOT</bcp14> modify any
+   <xref target="field.www-authenticate" format="none" sectionFormat="of" derivedContent="">WWW-Authenticate</xref> header fields in that response.
+

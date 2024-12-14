@@ -1,0 +1,5 @@
+- section-8.8.2.1-5: 
+   An origin server without a clock <bcp14>MUST NOT</bcp14> generate a Last-Modified
+   date for a response unless that date value was assigned to the resource
+   by some other system (presumably one with a clock).
+

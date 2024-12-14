@@ -1,0 +1,10 @@
+- section-15.3.7.2-1: 
+   If multiple parts are being transferred, the server generating the 206
+   response <bcp14>MUST</bcp14> generate "multipart/byteranges" content, as defined
+   in <xref target="multipart.byteranges" format="default" sectionFormat="of" derivedContent="Section 14.6"/>, and a
+   <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> header field containing the
+   "multipart/byteranges" media type and its required boundary parameter.
+   To avoid confusion with single-part responses, a server <bcp14>MUST NOT</bcp14> generate
+   a <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header field in the HTTP header section of a
+   multiple part response (this field will be sent in each part instead).
+

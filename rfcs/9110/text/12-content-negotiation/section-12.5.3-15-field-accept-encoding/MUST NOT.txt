@@ -1,0 +1,10 @@
+- section-12.5.3-15: 
+   Servers that fail a request due to an unsupported content coding ought to
+   respond with a <xref target="status.415" format="none" sectionFormat="of" derivedContent="">415 (Unsupported Media Type)</xref> status and
+   include an Accept-Encoding header field in that response, allowing
+   clients to distinguish between issues related to content codings and media
+   types. In order to avoid confusion with issues related to media types,
+   servers that fail a request with a 415 status for reasons unrelated to
+   content codings <bcp14>MUST NOT</bcp14> include the Accept-Encoding header
+   field.
+

@@ -1,0 +1,5 @@
+- section-9.3.1-7: 
+   The response to a GET request is cacheable; a cache <bcp14>MAY</bcp14> use it to satisfy
+   subsequent GET and HEAD requests unless otherwise indicated by the
+   Cache-Control header field (<xref target="CACHING" section="5.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2" derivedContent="CACHING"/>).
+

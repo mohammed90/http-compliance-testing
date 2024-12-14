@@ -1,0 +1,4 @@
+- section-4.2.1-4: 
+   A sender <bcp14>MUST NOT</bcp14> generate an "http" URI with an empty host identifier.
+   A recipient that processes such a URI reference <bcp14>MUST</bcp14> reject it as invalid.
+

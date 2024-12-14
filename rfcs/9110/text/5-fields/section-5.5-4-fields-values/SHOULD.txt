@@ -1,0 +1,13 @@
+- section-5.5-4: 
+   Field values are usually constrained to the range of US-ASCII characters
+   <xref target="USASCII" format="default" sectionFormat="of" derivedContent="USASCII"/>.
+   Fields needing a greater range of characters can use an encoding,
+   such as the one defined in <xref target="RFC8187" format="default" sectionFormat="of" derivedContent="RFC8187"/>.
+   Historically, HTTP allowed field content with text in the ISO-8859-1
+   charset <xref target="ISO-8859-1" format="default" sectionFormat="of" derivedContent="ISO-8859-1"/>, supporting other charsets only
+   through use of <xref target="RFC2047" format="default" sectionFormat="of" derivedContent="RFC2047"/> encoding.
+   Specifications for newly defined fields <bcp14>SHOULD</bcp14> limit their values to
+   visible US-ASCII octets (VCHAR), SP, and HTAB.
+   A recipient <bcp14>SHOULD</bcp14> treat other allowed octets in field content
+   (i.e., <xref target="fields.values" format="none" sectionFormat="of" derivedContent="">obs-text</xref>) as opaque data.
+

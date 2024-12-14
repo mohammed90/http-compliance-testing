@@ -1,0 +1,11 @@
+- section-7.8-11: 
+   For example, if the Upgrade header field is received in a GET request
+   and the server decides to switch protocols, it first responds
+   with a <xref target="status.101" format="none" sectionFormat="of" derivedContent="">101 (Switching Protocols)</xref> message in HTTP/1.1 and
+   then immediately follows that with the new protocol's equivalent of a
+   response to a GET on the target resource.  This allows a connection to be
+   upgraded to protocols with the same semantics as HTTP without the
+   latency cost of an additional round trip.  A server <bcp14>MUST NOT</bcp14> switch
+   protocols unless the received message semantics can be honored by the new
+   protocol; an OPTIONS request can be honored by any protocol.
+

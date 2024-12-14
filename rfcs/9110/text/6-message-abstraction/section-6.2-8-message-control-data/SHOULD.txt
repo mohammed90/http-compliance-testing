@@ -1,0 +1,10 @@
+- section-6.2-8: 
+   A recipient that receives a message with a major version number that it
+   implements and a minor version number higher than what it implements
+   <bcp14>SHOULD</bcp14> process the message as if it
+   were in the highest minor version within that major version to which the
+   recipient is conformant. A recipient can assume that a message with a
+   higher minor version, when sent to a recipient that has not yet indicated
+   support for that higher version, is sufficiently backwards-compatible to be
+   safely processed by any implementation of the same major version.
+

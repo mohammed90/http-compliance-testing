@@ -1,0 +1,7 @@
+- section-8.8.1-7: 
+   An origin server <bcp14>SHOULD</bcp14> change a weak entity tag whenever it
+   considers prior representations to be unacceptable as a substitute for
+   the current representation. In other words, a weak entity tag ought to
+   change whenever the origin server wants caches to invalidate old
+   responses.
+

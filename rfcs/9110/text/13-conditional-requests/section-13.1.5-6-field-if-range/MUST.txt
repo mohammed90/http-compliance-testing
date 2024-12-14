@@ -1,0 +1,8 @@
+- section-13.1.5-6: 
+   A client <bcp14>MUST NOT</bcp14> generate an If-Range header field in a request that
+   does not contain a <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field.
+   A server <bcp14>MUST</bcp14> ignore an If-Range header field received in a request that
+   does not contain a <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field.
+   An origin server <bcp14>MUST</bcp14> ignore an If-Range header field received in a
+   request for a target resource that does not support Range requests.
+

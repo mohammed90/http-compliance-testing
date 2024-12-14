@@ -1,0 +1,9 @@
+- section-15.4-4: 
+   If a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field
+   (<xref target="field.location" format="default" sectionFormat="of" derivedContent="Section 10.2.2"/>) is provided, the user agent <bcp14>MAY</bcp14>
+   automatically redirect its request to the URI referenced by the Location
+   field value, even if the specific status code is not understood.
+   Automatic redirection needs to be done with care for methods not known to be
+   <xref target="safe.methods" format="none" sectionFormat="of" derivedContent="">safe</xref>, as defined in <xref target="safe.methods" format="default" sectionFormat="of" derivedContent="Section 9.2.1"/>, since
+   the user might not wish to redirect an unsafe request.
+

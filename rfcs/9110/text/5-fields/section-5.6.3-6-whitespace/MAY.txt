@@ -1,0 +1,5 @@
+- section-5.6.3-6: 
+   BWS has no semantics. Any content known to be
+   defined as BWS <bcp14>MAY</bcp14> be removed before interpreting it or forwarding the
+   message downstream.
+

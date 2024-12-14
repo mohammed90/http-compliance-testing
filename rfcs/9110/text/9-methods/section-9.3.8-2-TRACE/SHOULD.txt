@@ -1,0 +1,9 @@
+- section-9.3.8-2: 
+   A client <bcp14>MUST NOT</bcp14> generate fields in a TRACE request containing
+   sensitive data that might be disclosed by the response. For example, it
+   would be foolish for a user agent to send stored user credentials
+   (<xref target="authentication" format="default" sectionFormat="of" derivedContent="Section 11"/>) or cookies <xref target="COOKIE" format="default" sectionFormat="of" derivedContent="COOKIE"/> in a TRACE
+   request. The final recipient of the request <bcp14>SHOULD</bcp14> exclude any request
+   fields that are likely to contain sensitive data when that recipient
+   generates the response content.
+

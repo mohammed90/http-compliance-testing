@@ -1,0 +1,6 @@
+- section-7.6.3-15: 
+   A sender <bcp14>SHOULD NOT</bcp14> combine multiple list members unless they are all
+   under the same organizational control and the hosts have already been
+   replaced by pseudonyms. A sender <bcp14>MUST NOT</bcp14> combine members that
+   have different received-protocol values.
+

@@ -1,0 +1,7 @@
+- section-15.5.14-1: 
+   The 413 (Content Too Large) status code indicates
+   that the server is refusing to process a request because the request
+   content is larger than the server is willing or able to process.
+   The server <bcp14>MAY</bcp14> terminate the request, if the protocol version in use
+   allows it; otherwise, the server <bcp14>MAY</bcp14> close the connection.
+

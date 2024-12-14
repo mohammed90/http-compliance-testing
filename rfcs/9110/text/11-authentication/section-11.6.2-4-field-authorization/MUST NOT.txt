@@ -1,0 +1,6 @@
+- section-11.6.2-4: 
+   A proxy forwarding a request <bcp14>MUST NOT</bcp14> modify any
+   <xref target="field.authorization" format="none" sectionFormat="of" derivedContent="">Authorization</xref> header fields in that request.
+   See <xref target="CACHING" section="3.5" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-3.5" derivedContent="CACHING"/> for details of and requirements
+   pertaining to handling of the Authorization header field by HTTP caches.
+

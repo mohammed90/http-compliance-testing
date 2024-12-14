@@ -1,0 +1,7 @@
+- section-10.1.5-8: 
+   A user agent <bcp14>SHOULD NOT</bcp14> generate a User-Agent header field containing needlessly
+   fine-grained detail and <bcp14>SHOULD</bcp14> limit the addition of subproducts by third
+   parties. Overly long and detailed User-Agent field values increase request
+   latency and the risk of a user being identified against their wishes
+   ("fingerprinting").
+

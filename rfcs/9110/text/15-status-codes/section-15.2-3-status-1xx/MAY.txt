@@ -1,0 +1,5 @@
+- section-15.2-3: 
+   A client <bcp14>MUST</bcp14> be able to parse one or more 1xx responses received
+   prior to a final response, even if the client does not expect one.
+   A user agent <bcp14>MAY</bcp14> ignore unexpected 1xx responses.
+

@@ -1,0 +1,15 @@
+- section-9.3.4-3: 
+   An origin server <bcp14>SHOULD</bcp14> verify that the PUT representation is consistent
+   with its configured constraints for the target resource. For example, if
+   an origin server determines a resource's representation metadata based on
+   the URI, then the origin server needs to ensure that the content received
+   in a successful PUT request is consistent with that metadata. When a PUT
+   representation is inconsistent with the target resource, the origin
+   server <bcp14>SHOULD</bcp14> either make them consistent, by transforming the
+   representation or changing the resource configuration, or respond
+   with an appropriate error message containing sufficient information
+   to explain why the representation is unsuitable.  The
+   <xref target="status.409" format="none" sectionFormat="of" derivedContent="">409 (Conflict)</xref> or <xref target="status.415" format="none" sectionFormat="of" derivedContent="">415 (Unsupported Media Type)</xref>
+   status codes are suggested, with the latter being specific to constraints on
+   <xref target="field.content-type" format="none" sectionFormat="of" derivedContent="">Content-Type</xref> values.
+

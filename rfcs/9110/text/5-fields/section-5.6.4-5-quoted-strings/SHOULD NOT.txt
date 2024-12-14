@@ -1,0 +1,8 @@
+- section-5.6.4-5: 
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a quoted-string except
+   where necessary to quote DQUOTE and backslash octets occurring within that
+   string.
+   A sender <bcp14>SHOULD NOT</bcp14> generate a quoted-pair in a comment except
+   where necessary to quote parentheses ["(" and ")"] and backslash octets
+   occurring within that comment.
+

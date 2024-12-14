@@ -1,0 +1,14 @@
+- section-9.3.4-8: 
+   An origin server <bcp14>MUST NOT</bcp14> send a validator field
+   (<xref target="response.validator" format="default" sectionFormat="of" derivedContent="Section 8.8"/>), such as an <xref target="field.etag" format="none" sectionFormat="of" derivedContent="">ETag</xref> or
+   <xref target="field.last-modified" format="none" sectionFormat="of" derivedContent="">Last-Modified</xref> field, in a successful response to PUT unless
+   the request's representation data was saved without any transformation
+   applied to the content (i.e., the resource's new representation data is
+   identical to the content received in the PUT request) and the
+   validator field value reflects the new representation.
+   This requirement allows a user agent to know when the representation it
+   sent (and retains in memory) is the result of the PUT, and thus it doesn't
+   need to be retrieved again from the origin server. The new validator(s)
+   received in the response can be used for future conditional requests in
+   order to prevent accidental overwrites (<xref target="preconditions" format="default" sectionFormat="of" derivedContent="Section 13.1"/>).
+

@@ -1,0 +1,10 @@
+- section-8.6-13: 
+   Likewise, a sender <bcp14>MUST NOT</bcp14> forward a message with a Content-Length
+   header field value that does not match the ABNF above, with one exception:
+   a recipient of a Content-Length header field value consisting of the same
+   decimal value repeated as a comma-separated list (e.g,
+   "Content-Length: 42, 42") <bcp14>MAY</bcp14> either reject the message as invalid or
+   replace that invalid field value with a single instance of the decimal
+   value, since this likely indicates that a duplicate was generated or
+   combined by an upstream message processor.
+

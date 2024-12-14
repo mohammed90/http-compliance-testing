@@ -1,0 +1,6 @@
+- section-13.1.2-8: 
+   When an origin server receives a request that selects a representation
+   and that request includes an If-None-Match header field,
+   the origin server <bcp14>MUST</bcp14> evaluate the If-None-Match condition per
+   <xref target="evaluation" format="default" sectionFormat="of" derivedContent="Section 13.2"/> prior to performing the method.
+

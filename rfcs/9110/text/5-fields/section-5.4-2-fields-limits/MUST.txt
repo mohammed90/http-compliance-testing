@@ -1,0 +1,7 @@
+- section-5.4-2: 
+   A server that receives a request header field line, field value, or set of
+   fields larger than it wishes to process <bcp14>MUST</bcp14> respond with an appropriate
+   <xref target="status.4xx" format="none" sectionFormat="of" derivedContent="">4xx (Client Error)</xref> status code. Ignoring such header fields
+   would increase the server's vulnerability to request smuggling attacks
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+

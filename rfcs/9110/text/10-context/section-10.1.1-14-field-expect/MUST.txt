@@ -1,0 +1,6 @@
+- section-10.1.1-14: 
+   Upon receiving an HTTP/1.1 (or later) request that has a method, target URI,
+   and complete header section that contains a 100-continue expectation and
+   an indication that request content will follow, an origin server <bcp14>MUST</bcp14>
+   send either:
+

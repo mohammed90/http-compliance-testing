@@ -1,0 +1,5 @@
+- section-4.3.4-3: 
+   A reference identity of type CN-ID <bcp14>MUST NOT</bcp14> be used by clients.  As noted
+   in <xref target="RFC6125" section="6.2.1" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc6125#section-6.2.1" derivedContent="RFC6125"/>, a reference
+   identity of type CN-ID might be used by older clients.
+

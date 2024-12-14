@@ -1,0 +1,9 @@
+- section-14.2-8: 
+   A client that is requesting multiple ranges <bcp14>SHOULD</bcp14> list those ranges in
+   ascending order (the order in which they would typically be received in a
+   complete representation) unless there is a specific need to request a later
+   part earlier. For example, a user agent processing a large representation
+   with an internal catalog of parts might need to request later parts first,
+   particularly if the representation consists of pages stored in reverse
+   order and the user agent wishes to transfer one page at a time.
+

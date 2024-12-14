@@ -1,0 +1,7 @@
+- section-9.3.2-4: 
+   The response to a HEAD request is cacheable; a cache <bcp14>MAY</bcp14> use it to
+   satisfy subsequent HEAD requests unless otherwise indicated by the
+   Cache-Control header field (<xref target="CACHING" section="5.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2" derivedContent="CACHING"/>).
+   A HEAD response might also affect previously cached responses to GET;
+   see <xref target="CACHING" section="4.3.5" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-4.3.5" derivedContent="CACHING"/>.
+

@@ -1,0 +1,9 @@
+- section-15.5.4-2: 
+   If authentication credentials were provided in the request, the
+   server considers them insufficient to grant access.
+   The client <bcp14>SHOULD NOT</bcp14> automatically repeat the request with the same
+   credentials.
+   The client <bcp14>MAY</bcp14> repeat the request with new or different credentials.
+   However, a request might be forbidden for reasons unrelated to the
+   credentials.
+

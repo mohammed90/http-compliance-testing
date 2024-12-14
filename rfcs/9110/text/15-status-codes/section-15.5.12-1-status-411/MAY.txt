@@ -1,0 +1,7 @@
+- section-15.5.12-1: 
+   The 411 (Length Required) status code indicates that the
+   server refuses to accept the request without a defined
+   <xref target="field.content-length" format="none" sectionFormat="of" derivedContent="">Content-Length</xref> (<xref target="field.content-length" format="default" sectionFormat="of" derivedContent="Section 8.6"/>).
+   The client <bcp14>MAY</bcp14> repeat the request if it adds a valid Content-Length
+   header field containing the length of the request content.
+

@@ -1,0 +1,8 @@
+- section-15.6.4-1: 
+   The 503 (Service Unavailable) status code indicates that the
+   server is currently unable to handle the request due to a temporary overload
+   or scheduled maintenance, which will likely be alleviated after some delay.
+   The server <bcp14>MAY</bcp14> send a <xref target="field.retry-after" format="none" sectionFormat="of" derivedContent="">Retry-After</xref> header field
+   (<xref target="field.retry-after" format="default" sectionFormat="of" derivedContent="Section 10.2.3"/>) to suggest an appropriate
+   amount of time for the client to wait before retrying the request.
+

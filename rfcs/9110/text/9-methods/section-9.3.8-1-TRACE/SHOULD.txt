@@ -1,0 +1,10 @@
+- section-9.3.8-1: 
+   The TRACE method requests a remote, application-level loop-back of the
+   request message. The final recipient of the request <bcp14>SHOULD</bcp14> reflect the
+   message received, excluding some fields described below, back to the client
+   as the content of a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response. The "message/http"
+   format (<xref target="HTTP11" section="10.1" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-10.1" derivedContent="HTTP/1.1"/>) is one way to do so.
+   The final recipient is either the origin server or the first server to
+   receive a <xref target="field.max-forwards" format="none" sectionFormat="of" derivedContent="">Max-Forwards</xref> value of zero (0) in the request
+   (<xref target="field.max-forwards" format="default" sectionFormat="of" derivedContent="Section 7.6.2"/>).
+

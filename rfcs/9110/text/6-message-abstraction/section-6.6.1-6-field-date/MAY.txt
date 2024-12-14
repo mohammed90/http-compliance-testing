@@ -1,0 +1,9 @@
+- section-6.6.1-6: 
+   An origin server with a clock (as defined in
+   <xref target="http.date" format="default" sectionFormat="of" derivedContent="Section 5.6.7"/>) <bcp14>MUST</bcp14> generate a Date header field in
+   all <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>, <xref target="status.3xx" format="none" sectionFormat="of" derivedContent="">3xx (Redirection)</xref>,
+   and <xref target="status.4xx" format="none" sectionFormat="of" derivedContent="">4xx (Client Error)</xref> responses,
+   and <bcp14>MAY</bcp14> generate a Date header field in
+   <xref target="status.1xx" format="none" sectionFormat="of" derivedContent="">1xx (Informational)</xref> and
+   <xref target="status.5xx" format="none" sectionFormat="of" derivedContent="">5xx (Server Error)</xref> responses.
+

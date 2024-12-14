@@ -1,0 +1,7 @@
+- section-9.3.2-1: 
+   The HEAD method is identical to GET except that the server <bcp14>MUST NOT</bcp14>
+   send content in the response. HEAD is used to obtain metadata about the
+   <xref target="selected.representation" format="none" sectionFormat="of" derivedContent="">selected representation</xref> without transferring its
+   representation data, often for the sake of testing hypertext links or
+   finding recent modifications.
+

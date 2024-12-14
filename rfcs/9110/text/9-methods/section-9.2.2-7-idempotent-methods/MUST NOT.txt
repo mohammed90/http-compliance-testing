@@ -1,0 +1,4 @@
+- section-9.2.2-7: 
+   A proxy <bcp14>MUST NOT</bcp14> automatically retry non-idempotent requests.
+   A client <bcp14>SHOULD NOT</bcp14> automatically retry a failed automatic retry.
+

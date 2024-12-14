@@ -1,0 +1,6 @@
+- section-8.8.3-8: 
+   A sender <bcp14>MAY</bcp14> send the ETag field in a trailer section (see
+   <xref target="trailer.fields" format="default" sectionFormat="of" derivedContent="Section 6.5"/>). However, since trailers are often
+   ignored, it is preferable to send ETag as a header field unless the
+   entity tag is generated while sending the content.
+

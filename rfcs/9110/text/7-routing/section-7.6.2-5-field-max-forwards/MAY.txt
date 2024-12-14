@@ -1,0 +1,4 @@
+- section-7.6.2-5: 
+   A recipient <bcp14>MAY</bcp14> ignore a Max-Forwards header field received with any
+   other request methods.
+

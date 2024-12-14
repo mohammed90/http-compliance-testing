@@ -1,0 +1,4 @@
+- section-15.4-7: 
+   A client <bcp14>SHOULD</bcp14> detect and intervene in cyclical redirections (i.e.,
+   "infinite" redirection loops).
+

@@ -1,0 +1,11 @@
+- section-10.1.3-10: 
+   Some intermediaries have been known to indiscriminately remove Referer
+   header fields from outgoing requests. This has the unfortunate side effect
+   of interfering with protection against CSRF attacks, which can be far
+   more harmful to their users. Intermediaries and user agent extensions that
+   wish to limit information disclosure in Referer ought to restrict their
+   changes to specific edits, such as replacing internal domain names with
+   pseudonyms or truncating the query and/or path components.
+   An intermediary <bcp14>SHOULD NOT</bcp14> modify or delete the Referer header field when
+   the field value shares the same scheme and host as the target URI.
+

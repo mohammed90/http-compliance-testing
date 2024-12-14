@@ -1,0 +1,11 @@
+- section-6.5.1-3: 
+   Trailer fields can be difficult to process by intermediaries that forward
+   messages from one protocol version to another. If the entire message can be
+   buffered in transit, some intermediaries could merge trailer fields into
+   the header section (as appropriate) before it is forwarded. However, in
+   most cases, the trailers are simply discarded.
+   A recipient <bcp14>MUST NOT</bcp14> merge a trailer field into a header section unless
+   the recipient understands the corresponding header field definition and
+   that definition explicitly permits and defines how trailer field values
+   can be safely merged.
+

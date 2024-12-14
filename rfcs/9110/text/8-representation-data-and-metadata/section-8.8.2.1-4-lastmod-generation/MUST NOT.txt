@@ -1,0 +1,11 @@
+- section-8.8.2.1-4: 
+   An origin server with a clock (as defined in <xref target="http.date" format="default" sectionFormat="of" derivedContent="Section 5.6.7"/>)
+   <bcp14>MUST NOT</bcp14> generate a Last-Modified date that is later than the
+   server's time of message origination
+   (<xref target="field.date" format="none" sectionFormat="of" derivedContent="">Date</xref>, <xref target="field.date" format="default" sectionFormat="of" derivedContent="Section 6.6.1"/>).
+   If the last modification time is derived from implementation-specific
+   metadata that evaluates to some time in the future, according to the
+   origin server's clock, then the origin server <bcp14>MUST</bcp14> replace that
+   value with the message origination date. This prevents a future
+   modification date from having an adverse impact on cache validation.
+

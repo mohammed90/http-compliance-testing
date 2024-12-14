@@ -1,0 +1,6 @@
+- section-13.1.5-13: 
+   A recipient of an If-Range header field <bcp14>MUST</bcp14> ignore the
+   <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field if the If-Range condition
+   evaluates to false. Otherwise, the recipient <bcp14>SHOULD</bcp14> process the
+   <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field as requested.
+

@@ -1,0 +1,11 @@
+- section-15.3.7.2-6: 
+   A server that generates a multipart response <bcp14>SHOULD</bcp14> send
+   the parts in the same order that the corresponding range-spec appeared
+   in the received <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field, excluding those ranges
+   that were deemed unsatisfiable or that were coalesced into other ranges.
+   A client that receives a multipart response <bcp14>MUST</bcp14> inspect the
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header field present in each body part in
+   order to determine which range is contained in that body part; a client
+   cannot rely on receiving the same ranges that it requested, nor the same
+   order that it requested.
+

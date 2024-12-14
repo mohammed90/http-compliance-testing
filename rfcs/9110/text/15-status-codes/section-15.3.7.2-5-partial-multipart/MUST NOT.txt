@@ -1,0 +1,10 @@
+- section-15.3.7.2-5: 
+   A server <bcp14>MUST NOT</bcp14> generate a multipart response to a request for a single
+   range, since a client that does not request multiple parts might not
+   support multipart responses. However, a server <bcp14>MAY</bcp14> generate a
+   "multipart/byteranges" response with only a single body part if multiple
+   ranges were requested and only one range was found to be satisfiable or
+   only one range remained after coalescing.
+   A client that cannot process a "multipart/byteranges" response <bcp14>MUST NOT</bcp14>
+   generate a request that asks for multiple ranges.
+

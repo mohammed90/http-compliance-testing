@@ -1,0 +1,8 @@
+- section-5.6.7-17: 
+   A sender <bcp14>MUST NOT</bcp14> generate additional whitespace in an HTTP-date beyond
+   that specifically included as SP in the grammar.
+   The semantics of <xref target="preferred.date.format" format="none" sectionFormat="of" derivedContent="">day-name</xref>, <xref target="preferred.date.format" format="none" sectionFormat="of" derivedContent="">day</xref>,
+   <xref target="preferred.date.format" format="none" sectionFormat="of" derivedContent="">month</xref>, <xref target="preferred.date.format" format="none" sectionFormat="of" derivedContent="">year</xref>, and <xref target="preferred.date.format" format="none" sectionFormat="of" derivedContent="">time-of-day</xref>
+   are the same as those defined for the Internet Message Format constructs
+   with the corresponding name (<xref target="RFC5322" sectionFormat="comma" section="3.3" format="default" derivedLink="https://rfc-editor.org/rfc/rfc5322#section-3.3" derivedContent="RFC5322"/>).
+

@@ -1,0 +1,5 @@
+- section-7.8-6: 
+   A server that sends a <xref target="status.426" format="none" sectionFormat="of" derivedContent="">426 (Upgrade Required)</xref> response
+   <bcp14>MUST</bcp14> send an Upgrade header field to indicate the acceptable protocols,
+   in order of descending preference.
+

@@ -1,0 +1,5 @@
+- section-9.2.1-5: 
+   A user agent <bcp14>SHOULD</bcp14> distinguish between safe and unsafe methods when
+   presenting potential actions to a user, such that the user can be made
+   aware of an unsafe action before it is requested.
+

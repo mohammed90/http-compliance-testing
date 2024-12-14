@@ -1,0 +1,12 @@
+- section-14.2-6: 
+   A server that supports range requests <bcp14>MAY</bcp14> ignore or reject a
+   <xref target="field.range" format="none" sectionFormat="of" derivedContent="">Range</xref> header field that contains an invalid
+   <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> (<xref target="range.specifiers" format="default" sectionFormat="of" derivedContent="Section 14.1.1"/>),
+   a <xref target="rule.ranges-specifier" format="none" sectionFormat="of" derivedContent="">ranges-specifier</xref> with more than two overlapping ranges,
+   or a set of many small ranges that are not listed in ascending order,
+   since these are indications of either a broken client or a deliberate
+   denial-of-service attack (<xref target="overlapping.ranges" format="default" sectionFormat="of" derivedContent="Section 17.15"/>).
+   A client <bcp14>SHOULD NOT</bcp14> request multiple ranges that are inherently less
+   efficient to process and transfer than a single range that encompasses the
+   same data.
+

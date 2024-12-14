@@ -1,0 +1,9 @@
+- section-12.5.1-6: 
+   Previous specifications allowed additional extension parameters to appear
+   after the weight parameter. The accept extension grammar (accept-params, accept-ext) has
+   been removed because it had a complicated definition, was not being used in
+   practice, and is more easily deployed through new header fields. Senders
+   using weights <bcp14>SHOULD</bcp14> send "q" last (after all media-range parameters).
+   Recipients <bcp14>SHOULD</bcp14> process any parameter named "q" as weight, regardless of
+   parameter ordering.
+

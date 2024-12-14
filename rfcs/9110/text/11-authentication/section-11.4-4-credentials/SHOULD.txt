@@ -1,0 +1,8 @@
+- section-11.4-4: 
+   Likewise, upon receipt of a request that omits proxy credentials or
+   contains invalid or partial proxy credentials, a proxy that requires
+   authentication <bcp14>SHOULD</bcp14> generate a
+   <xref target="status.407" format="none" sectionFormat="of" derivedContent="">407 (Proxy Authentication Required)</xref> response that contains
+   a <xref target="field.proxy-authenticate" format="none" sectionFormat="of" derivedContent="">Proxy-Authenticate</xref> header field with at least one
+   (possibly new) challenge applicable to the proxy.
+

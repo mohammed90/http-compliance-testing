@@ -1,0 +1,13 @@
+- section-13.2.1-1: 
+   Except when excluded below, a recipient cache or origin server <bcp14>MUST</bcp14>
+   evaluate received request preconditions after it has successfully performed
+   its normal request checks and just before it would process the request content
+   (if any) or perform the action associated with the request method.
+   A server <bcp14>MUST</bcp14> ignore all received preconditions if its response to the
+   same request without those conditions, prior to processing the request content,
+   would have been a status code other than a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>
+   or <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref>.
+   In other words, redirects and failures that can be detected before
+   significant processing occurs take precedence over the evaluation
+   of preconditions.
+

@@ -1,0 +1,5 @@
+- section-13.1.5-8: 
+   A server that receives an If-Range header field on a Range request <bcp14>MUST</bcp14>
+   evaluate the condition per <xref target="evaluation" format="default" sectionFormat="of" derivedContent="Section 13.2"/> prior to
+   performing the method.
+

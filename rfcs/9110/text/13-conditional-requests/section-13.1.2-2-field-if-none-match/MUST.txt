@@ -1,0 +1,6 @@
+- section-13.1.2-2: 
+   A recipient <bcp14>MUST</bcp14> use the weak comparison function when comparing
+   entity tags for If-None-Match (<xref target="entity.tag.comparison" format="default" sectionFormat="of" derivedContent="Section 8.8.3.2"/>),
+   since weak entity tags can be used for cache validation even if there have
+   been changes to the representation data.
+

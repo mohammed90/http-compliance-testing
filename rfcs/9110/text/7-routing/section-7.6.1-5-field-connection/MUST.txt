@@ -1,0 +1,8 @@
+- section-7.6.1-5: 
+   Intermediaries <bcp14>MUST</bcp14> parse a received Connection
+   header field before a message is forwarded and, for each
+   connection-option in this field, remove any header or trailer field(s) from
+   the message with the same name as the connection-option, and then
+   remove the Connection header field itself (or replace it with the
+   intermediary's own control options for the forwarded message).
+

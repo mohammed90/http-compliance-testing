@@ -1,0 +1,6 @@
+- section-14.2-3: 
+   A server <bcp14>MAY</bcp14> ignore the Range header field. However, origin servers and
+   intermediate caches ought to support byte ranges when possible, since they
+   support efficient recovery from partially failed transfers and partial
+   retrieval of large representations.
+

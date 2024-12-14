@@ -1,0 +1,10 @@
+- section-9.3.4-2: 
+   If the target resource does not have a current representation and
+   the PUT successfully creates one, then the origin server <bcp14>MUST</bcp14> inform
+   the user agent by sending a <xref target="status.201" format="none" sectionFormat="of" derivedContent="">201 (Created)</xref> response.  If the
+   target resource does have a current representation and that representation is
+   successfully modified in accordance with the state of the enclosed
+   representation, then the origin server <bcp14>MUST</bcp14> send either a
+   <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> or a <xref target="status.204" format="none" sectionFormat="of" derivedContent="">204 (No Content)</xref> response to
+   indicate successful completion of the request.
+

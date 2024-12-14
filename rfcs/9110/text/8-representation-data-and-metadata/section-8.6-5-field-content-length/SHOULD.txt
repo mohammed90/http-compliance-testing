@@ -1,0 +1,10 @@
+- section-8.6-5: 
+   A user agent <bcp14>SHOULD</bcp14> send Content-Length in a request when the method
+   defines a meaning for enclosed content and it is not sending
+   Transfer-Encoding.
+   For example, a user agent normally sends Content-Length in a POST request
+   even when the value is 0 (indicating empty content).
+   A user agent <bcp14>SHOULD NOT</bcp14> send a
+   Content-Length header field when the request message does not contain
+   content and the method semantics do not anticipate such data.
+

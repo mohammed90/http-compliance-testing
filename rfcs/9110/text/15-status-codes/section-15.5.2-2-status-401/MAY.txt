@@ -1,0 +1,10 @@
+- section-15.5.2-2: 
+   If the request included authentication credentials, then the 401 response
+   indicates that authorization has been refused for those credentials.
+   The user agent <bcp14>MAY</bcp14> repeat the request with a new or replaced
+   <xref target="field.authorization" format="none" sectionFormat="of" derivedContent="">Authorization</xref> header field (<xref target="field.authorization" format="default" sectionFormat="of" derivedContent="Section 11.6.2"/>).
+   If the 401 response contains the same challenge as the prior response, and
+   the user agent has already attempted authentication at least once, then the
+   user agent <bcp14>SHOULD</bcp14> present the enclosed representation to the user, since
+   it usually contains relevant diagnostic information.
+

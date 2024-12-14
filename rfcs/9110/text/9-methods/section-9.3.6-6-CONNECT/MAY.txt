@@ -1,0 +1,8 @@
+- section-9.3.6-6: 
+   CONNECT is intended for use in requests to a proxy.
+   The recipient can establish a tunnel either by directly connecting to
+   the server identified by the request target or, if configured to use
+   another proxy, by forwarding the CONNECT request to the next inbound proxy.
+   An origin server <bcp14>MAY</bcp14> accept a CONNECT request, but most origin servers
+   do not implement CONNECT.
+

@@ -1,0 +1,11 @@
+- section-9.1-10: 
+   The set of methods allowed by a target resource can be listed in an
+   <xref target="field.allow" format="none" sectionFormat="of" derivedContent="">Allow</xref> header field (<xref target="field.allow" format="default" sectionFormat="of" derivedContent="Section 10.2.1"/>).
+   However, the set of allowed methods can change dynamically.
+   An origin server that receives a request method that is unrecognized or
+   not implemented <bcp14>SHOULD</bcp14> respond with the
+   <xref target="status.501" format="none" sectionFormat="of" derivedContent="">501 (Not Implemented)</xref> status code.
+   An origin server that receives a request method that is recognized and
+   implemented, but not allowed for the target resource, <bcp14>SHOULD</bcp14> respond
+   with the <xref target="status.405" format="none" sectionFormat="of" derivedContent="">405 (Method Not Allowed)</xref> status code.
+

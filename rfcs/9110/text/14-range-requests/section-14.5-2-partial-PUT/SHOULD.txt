@@ -1,0 +1,5 @@
+- section-14.5-2: 
+   An origin server <bcp14>SHOULD</bcp14> respond with a <xref target="status.400" format="none" sectionFormat="of" derivedContent="">400 (Bad Request)</xref>
+   status code if it receives <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> on a PUT for a
+   target resource that does not support partial PUT requests.
+

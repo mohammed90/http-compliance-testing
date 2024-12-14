@@ -1,0 +1,8 @@
+- section-8.6-7: 
+   A server <bcp14>MAY</bcp14> send a Content-Length header field in a
+   <xref target="status.304" format="none" sectionFormat="of" derivedContent="">304 (Not Modified)</xref> response to a conditional GET request
+   (<xref target="status.304" format="default" sectionFormat="of" derivedContent="Section 15.4.5"/>); a server <bcp14>MUST NOT</bcp14> send Content-Length in such a
+   response unless its field value equals the decimal number of octets that
+   would have been sent in the content of a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref>
+   response to the same request.
+

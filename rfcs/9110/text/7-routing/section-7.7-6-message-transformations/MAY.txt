@@ -1,0 +1,8 @@
+- section-7.7-6: 
+   A proxy <bcp14>MAY</bcp14> transform the content of a message
+   that does not contain a no-transform cache directive.
+   A proxy that transforms the content of a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref> response
+   can inform downstream recipients that a transformation has been
+   applied by changing the response status code to
+   <xref target="status.203" format="none" sectionFormat="of" derivedContent="">203 (Non-Authoritative Information)</xref> (<xref target="status.203" format="default" sectionFormat="of" derivedContent="Section 15.3.4"/>).
+

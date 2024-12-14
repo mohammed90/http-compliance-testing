@@ -1,0 +1,6 @@
+- section-9.3.6-8: 
+   A tunnel is closed when a tunnel intermediary detects that either side
+   has closed its connection: the intermediary <bcp14>MUST</bcp14> attempt to send any
+   outstanding data that came from the closed side to the other side, close
+   both connections, and then discard any remaining data left undelivered.
+

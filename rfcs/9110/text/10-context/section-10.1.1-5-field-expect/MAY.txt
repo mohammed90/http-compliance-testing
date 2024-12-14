@@ -1,0 +1,7 @@
+- section-10.1.1-5: 
+   A server that receives an Expect field value containing a member other than
+   <xref target="field.expect" format="none" sectionFormat="of" derivedContent="">100-continue</xref>
+            <bcp14>MAY</bcp14> respond with a
+   <xref target="status.417" format="none" sectionFormat="of" derivedContent="">417 (Expectation Failed)</xref> status code to indicate that the
+   unexpected expectation cannot be met.
+

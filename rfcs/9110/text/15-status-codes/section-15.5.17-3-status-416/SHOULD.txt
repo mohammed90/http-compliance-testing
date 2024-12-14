@@ -1,0 +1,6 @@
+- section-15.5.17-3: 
+   A server that generates a 416 response to a byte-range request <bcp14>SHOULD</bcp14>
+   generate a <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header field
+   specifying the current length of the selected representation
+   (<xref target="field.content-range" format="default" sectionFormat="of" derivedContent="Section 14.4"/>).
+

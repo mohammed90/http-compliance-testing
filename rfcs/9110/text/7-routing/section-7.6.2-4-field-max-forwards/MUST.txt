@@ -1,0 +1,11 @@
+- section-7.6.2-4: 
+   Each intermediary that receives a TRACE or OPTIONS request containing a
+   Max-Forwards header field <bcp14>MUST</bcp14> check and update its value prior to
+   forwarding the request. If the received value is zero (0), the intermediary
+   <bcp14>MUST NOT</bcp14> forward the request; instead, the intermediary <bcp14>MUST</bcp14> respond as
+   the final recipient. If the received Max-Forwards value is greater than
+   zero, the intermediary <bcp14>MUST</bcp14> generate an updated Max-Forwards field in the
+   forwarded message with a field value that is the lesser of a) the received
+   value decremented by one (1) or b) the recipient's maximum supported value
+   for Max-Forwards.
+

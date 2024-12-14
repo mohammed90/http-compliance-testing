@@ -1,0 +1,8 @@
+- section-10.1.3-1: 
+   The "Referer" [sic] header field allows the user agent to specify a URI
+   reference for the resource from which the <xref target="target.resource" format="none" sectionFormat="of" derivedContent="">target URI</xref> was
+   obtained (i.e., the "referrer", though the field name is misspelled).
+   A user agent <bcp14>MUST NOT</bcp14> include the fragment and userinfo components
+   of the URI reference <xref target="URI" format="default" sectionFormat="of" derivedContent="URI"/>, if any, when generating the
+   Referer field value.
+

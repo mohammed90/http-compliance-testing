@@ -1,0 +1,6 @@
+- section-9.2.2-4: 
+   A client <bcp14>SHOULD NOT</bcp14> automatically retry a request with a non-idempotent
+   method unless it has some means to know that the request semantics are
+   actually idempotent, regardless of the method, or some means to detect that
+   the original request was never applied.
+

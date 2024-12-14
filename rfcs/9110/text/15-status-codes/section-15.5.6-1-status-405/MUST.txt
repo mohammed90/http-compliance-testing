@@ -1,0 +1,8 @@
+- section-15.5.6-1: 
+   The 405 (Method Not Allowed) status code indicates that the
+   method received in the request-line is known by the origin server but
+   not supported by the <xref target="target.resource" format="none" sectionFormat="of" derivedContent="">target resource</xref>.
+   The origin server <bcp14>MUST</bcp14> generate an <xref target="field.allow" format="none" sectionFormat="of" derivedContent="">Allow</xref> header field in
+   a 405 response containing a list of the target resource's currently
+   supported methods.
+

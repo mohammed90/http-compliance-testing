@@ -1,0 +1,6 @@
+- section-10.1.2-6: 
+   A robotic user agent <bcp14>SHOULD</bcp14> send a valid From header field so that the
+   person responsible for running the robot can be contacted if problems
+   occur on servers, such as if the robot is sending excessive, unwanted,
+   or invalid requests.
+

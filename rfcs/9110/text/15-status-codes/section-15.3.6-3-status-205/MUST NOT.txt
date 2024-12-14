@@ -1,0 +1,4 @@
+- section-15.3.6-3: 
+   Since the 205 status code implies that no additional content will be
+   provided, a server <bcp14>MUST NOT</bcp14> generate content in a 205 response.
+

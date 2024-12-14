@@ -1,0 +1,3 @@
+- section-9.3.8-4: 
+   A client <bcp14>MUST NOT</bcp14> send content in a TRACE request.
+

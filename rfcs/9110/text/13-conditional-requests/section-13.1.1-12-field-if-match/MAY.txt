@@ -1,0 +1,11 @@
+- section-13.1.1-12: 
+   A client <bcp14>MAY</bcp14> send an If-Match header field in a
+   <xref target="GET" format="none" sectionFormat="of" derivedContent="">GET</xref> request to indicate that it would prefer a
+   <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> response if the selected
+   representation does not match. However, this is only useful in range
+   requests (<xref target="range.requests" format="default" sectionFormat="of" derivedContent="Section 14"/>) for completing a previously
+   received partial representation when there is no desire for a new
+   representation. <xref target="field.if-range" format="none" sectionFormat="of" derivedContent="">If-Range</xref> (<xref target="field.if-range" format="default" sectionFormat="of" derivedContent="Section 13.1.5"/>)
+   is better suited for range requests when the client prefers to receive a
+   new representation.
+

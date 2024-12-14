@@ -1,0 +1,5 @@
+- section-2.3-1: 
+   A recipient <bcp14>SHOULD</bcp14> parse a received protocol element defensively, with
+   only marginal expectations that the element will conform to its ABNF
+   grammar and fit within a reasonable buffer size.
+

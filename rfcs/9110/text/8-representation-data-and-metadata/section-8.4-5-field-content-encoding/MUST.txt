@@ -1,0 +1,7 @@
+- section-8.4-5: 
+   If one or more encodings have been applied to a representation, the sender
+   that applied the encodings <bcp14>MUST</bcp14> generate a Content-Encoding header field
+   that lists the content codings in the order in which they were applied.
+   Note that the coding named "identity" is reserved for its special role
+   in <xref target="field.accept-encoding" format="none" sectionFormat="of" derivedContent="">Accept-Encoding</xref> and thus <bcp14>SHOULD NOT</bcp14> be included.
+

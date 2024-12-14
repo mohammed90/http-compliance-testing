@@ -1,0 +1,4 @@
+- section-9.3.6-4: 
+   A server <bcp14>MUST</bcp14> reject a CONNECT request that targets an empty or invalid
+   port number, typically by responding with a 400 (Bad Request) status code.
+

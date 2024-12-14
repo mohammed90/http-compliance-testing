@@ -1,0 +1,6 @@
+- section-15.5.9-2: 
+   If the client has an outstanding request in transit, it <bcp14>MAY</bcp14> repeat that
+   request. If the current connection is not usable (e.g., as it would be in
+   HTTP/1.1 because request delimitation is lost), a new connection will be
+   used.
+

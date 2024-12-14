@@ -1,0 +1,5 @@
+- section-6.6.1-9: 
+   A recipient with a clock that receives a response with an invalid Date
+   header field value <bcp14>MAY</bcp14> replace that value with the time that
+   response was received.
+

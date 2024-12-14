@@ -1,0 +1,8 @@
+- section-12.5.4-9: 
+   Since intelligibility is highly dependent on the individual user, user
+   agents need to allow user control over the linguistic preference (either
+   through configuration of the user agent itself or by defaulting to a user
+   controllable system setting).
+   A user agent that does not provide such control to the user <bcp14>MUST NOT</bcp14>
+   send an Accept-Language header field.
+

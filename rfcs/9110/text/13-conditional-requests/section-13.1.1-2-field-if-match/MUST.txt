@@ -1,0 +1,6 @@
+- section-13.1.1-2: 
+   An origin server <bcp14>MUST</bcp14> use the strong comparison function when comparing
+   entity tags for If-Match (<xref target="entity.tag.comparison" format="default" sectionFormat="of" derivedContent="Section 8.8.3.2"/>), since
+   the client intends this precondition to prevent the method from being
+   applied if there have been any changes to the representation data.
+

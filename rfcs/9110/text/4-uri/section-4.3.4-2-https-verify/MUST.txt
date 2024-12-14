@@ -1,0 +1,8 @@
+- section-4.3.4-2: 
+   In general, a client <bcp14>MUST</bcp14> verify the service identity using the
+   verification process defined in
+   <xref target="RFC6125" section="6" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc6125#section-6" derivedContent="RFC6125"/>. The client <bcp14>MUST</bcp14> construct
+   a reference identity from the service's host: if the host is a literal IP address
+   (<xref target="https.ip-id" format="default" sectionFormat="of" derivedContent="Section 4.3.5"/>), the reference identity is an IP-ID, otherwise
+   the host is a name and the reference identity is a DNS-ID.
+

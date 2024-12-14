@@ -1,0 +1,5 @@
+- section-7.5-3: 
+   A client that receives a response while it is still sending the associated
+   request <bcp14>SHOULD</bcp14> continue sending that request unless it receives
+   an explicit indication to the contrary (see, e.g., <xref target="HTTP11" section="9.5" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-9.5" derivedContent="HTTP/1.1"/> and <xref target="HTTP2" section="6.4" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9113#section-6.4" derivedContent="HTTP/2"/>).
+

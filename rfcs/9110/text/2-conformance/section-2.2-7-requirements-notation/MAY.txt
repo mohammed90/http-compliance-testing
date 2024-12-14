@@ -1,0 +1,10 @@
+- section-2.2-7: 
+   When an implementation fails semantic conformance, recipients of that
+   implementation's messages will eventually develop workarounds to adjust
+   their behavior accordingly. A recipient <bcp14>MAY</bcp14> employ such workarounds while
+   remaining conformant to this protocol if the workarounds are limited to the
+   implementations at fault. For example, servers often scan portions of the
+   User-Agent field value, and user agents often scan the Server field value,
+   to adjust their own behavior with respect to known bugs or poorly chosen
+   defaults.
+

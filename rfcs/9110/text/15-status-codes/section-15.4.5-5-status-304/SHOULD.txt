@@ -1,0 +1,7 @@
+- section-15.4.5-5: 
+   Requirements on a cache that receives a 304 response are defined in
+   <xref target="CACHING" section="4.3.4" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-4.3.4" derivedContent="CACHING"/>. If the conditional request originated with an
+   outbound client, such as a user agent with its own cache sending a
+   conditional GET to a shared proxy, then the proxy <bcp14>SHOULD</bcp14> forward the
+   304 response to that client.
+

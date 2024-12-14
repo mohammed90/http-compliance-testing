@@ -1,0 +1,8 @@
+- section-3.3-5: 
+   As a result, a server <bcp14>MUST NOT</bcp14>
+   assume that two requests on the same connection are from the same user
+   agent unless the connection is secured and specific to that agent.
+   Some non-standard HTTP extensions (e.g., <xref target="RFC4559" format="default" sectionFormat="of" derivedContent="RFC4559"/>) have
+   been known to violate this requirement, resulting in security and
+   interoperability problems.
+

@@ -1,0 +1,10 @@
+- section-13.1.2-6: 
+   If-None-Match is primarily used in conditional GET requests to enable
+   efficient updates of cached information with a minimum amount of
+   transaction overhead. When a client desires to update one or more stored
+   responses that have entity tags, the client <bcp14>SHOULD</bcp14> generate an
+   If-None-Match header field containing a list of those entity tags when
+   making a GET request; this allows recipient servers to send a
+   <xref target="status.304" format="none" sectionFormat="of" derivedContent="">304 (Not Modified)</xref> response to indicate when one of those
+   stored responses matches the selected representation.
+

@@ -1,0 +1,5 @@
+- section-8.4-9: 
+   An origin server <bcp14>MAY</bcp14> respond with a status code of
+   <xref target="status.415" format="none" sectionFormat="of" derivedContent="">415 (Unsupported Media Type)</xref> if a representation in the
+   request message has a content coding that is not acceptable.
+

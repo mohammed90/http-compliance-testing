@@ -1,0 +1,4 @@
+- section-15.4-5: 
+   When automatically following a redirected request, the user agent <bcp14>SHOULD</bcp14>
+   resend the original request message with the following modifications:
+

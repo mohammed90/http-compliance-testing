@@ -1,0 +1,5 @@
+- section-5.6.3-4: 
+   OWS and RWS have the same semantics as a single SP. Any content known to
+   be defined as OWS or RWS <bcp14>MAY</bcp14> be replaced with a single SP before
+   interpreting it or forwarding the message downstream.
+

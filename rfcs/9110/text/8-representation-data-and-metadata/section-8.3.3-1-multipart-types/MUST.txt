@@ -1,0 +1,8 @@
+- section-8.3.3-1: 
+   MIME provides for a number of "multipart" types -- encapsulations of
+   one or more representations within a single message body. All multipart
+   types share a common syntax, as defined in <xref target="RFC2046" section="5.1.1" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc2046#section-5.1.1" derivedContent="RFC2046"/>,
+   and include a boundary parameter as part of the media type
+   value. The message body is itself a protocol element; a sender <bcp14>MUST</bcp14>
+   generate only CRLF to represent line breaks between body parts.
+

@@ -1,0 +1,6 @@
+- section-14.3-7: 
+   Conversely, a client <bcp14>MUST NOT</bcp14> assume that receiving an Accept-Ranges field
+   means that future range requests will return partial responses. The content might
+   change, the server might only support range requests at certain times or under
+   certain conditions, or a different intermediary might process the next request.
+

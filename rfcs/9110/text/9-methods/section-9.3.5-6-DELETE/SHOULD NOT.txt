@@ -1,0 +1,14 @@
+- section-9.3.5-6: 
+   Although request message framing is independent of the method used,
+   content received in a DELETE request has no generally defined semantics,
+   cannot alter the meaning or target of the request, and might lead some
+   implementations to reject the request and close the connection because of
+   its potential as a request smuggling attack
+   (<xref target="HTTP11" section="11.2" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-11.2" derivedContent="HTTP/1.1"/>).
+   A client <bcp14>SHOULD NOT</bcp14> generate content in a DELETE request unless it is
+   made directly to an origin server that has previously indicated,
+   in or out of band, that such a request has a purpose and will be adequately
+   supported. An origin server <bcp14>SHOULD NOT</bcp14> rely on private agreements to
+   receive content, since participants in HTTP communication are often
+   unaware of intermediaries along the request chain.
+

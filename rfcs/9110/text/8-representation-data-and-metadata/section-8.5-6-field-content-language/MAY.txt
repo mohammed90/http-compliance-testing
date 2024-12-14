@@ -1,0 +1,6 @@
+- section-8.5-6: 
+   Multiple languages <bcp14>MAY</bcp14> be listed for content that is intended for
+   multiple audiences. For example, a rendition of the "Treaty of
+   Waitangi", presented simultaneously in the original Maori and English
+   versions, would call for
+

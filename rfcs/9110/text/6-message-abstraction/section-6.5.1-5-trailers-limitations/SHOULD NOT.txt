@@ -1,0 +1,5 @@
+- section-6.5.1-5: 
+   Because of the potential for trailer fields to be discarded in transit, a
+   server <bcp14>SHOULD NOT</bcp14> generate trailer fields that it believes are necessary
+   for the user agent to receive.
+

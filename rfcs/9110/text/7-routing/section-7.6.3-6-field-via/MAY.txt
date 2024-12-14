@@ -1,0 +1,9 @@
+- section-7.6.3-6: 
+   The received-by portion is normally the host and optional
+   port number of a recipient server or client that subsequently forwarded the
+   message.
+   However, if the real host is considered to be sensitive information, a
+   sender <bcp14>MAY</bcp14> replace it with a pseudonym. If a port is not provided,
+   a recipient <bcp14>MAY</bcp14> interpret that as meaning it was received on the default
+   port, if any, for the received-protocol.
+

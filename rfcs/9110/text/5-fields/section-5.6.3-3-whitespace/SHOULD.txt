@@ -1,0 +1,4 @@
+- section-5.6.3-3: 
+   The RWS rule is used when at least one linear whitespace octet is required
+   to separate field tokens. A sender <bcp14>SHOULD</bcp14> generate RWS as a single SP.
+

@@ -1,0 +1,8 @@
+- section-7.7-5: 
+   A proxy <bcp14>MUST NOT</bcp14> transform the content (<xref target="content" format="default" sectionFormat="of" derivedContent="Section 6.4"/>) of a
+   response message that contains a no-transform cache directive
+   (<xref target="CACHING" section="5.2.2.6" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9111#section-5.2.2.6" derivedContent="CACHING"/>). Note that this
+   does not apply to message transformations that do not change the content,
+   such as the addition or removal of transfer codings
+   (<xref target="HTTP11" section="7" format="default" sectionFormat="of" derivedLink="https://rfc-editor.org/rfc/rfc9112#section-7" derivedContent="HTTP/1.1"/>).
+

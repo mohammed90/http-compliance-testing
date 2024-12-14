@@ -1,0 +1,5 @@
+- section-15.4.5-2: 
+   The server generating a 304 response <bcp14>MUST</bcp14> generate any of the following
+   header fields that would have been sent in a <xref target="status.200" format="none" sectionFormat="of" derivedContent="">200 (OK)</xref>
+   response to the same request:
+

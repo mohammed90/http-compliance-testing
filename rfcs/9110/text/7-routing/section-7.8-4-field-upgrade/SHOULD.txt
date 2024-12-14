@@ -1,0 +1,5 @@
+- section-7.8-4: 
+   Although protocol names are registered with a preferred case,
+   recipients <bcp14>SHOULD</bcp14> use case-insensitive comparison when matching each
+   protocol-name to supported protocols.
+

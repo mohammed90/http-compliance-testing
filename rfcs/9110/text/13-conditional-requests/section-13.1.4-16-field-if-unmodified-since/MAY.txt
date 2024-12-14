@@ -1,0 +1,4 @@
+- section-13.1.4-16: 
+   A cache or intermediary <bcp14>MAY</bcp14> ignore If-Unmodified-Since because its
+   interoperability features are only necessary for an origin server.
+

@@ -1,0 +1,7 @@
+- section-7.2-4: 
+   The target URI's authority information is critical for handling a
+   request. A user agent <bcp14>MUST</bcp14> generate a Host header field in a request
+   unless it sends that information as an ":authority" pseudo-header field.
+   A user agent that sends Host <bcp14>SHOULD</bcp14> send it as the first field in the
+   header section of a request.
+

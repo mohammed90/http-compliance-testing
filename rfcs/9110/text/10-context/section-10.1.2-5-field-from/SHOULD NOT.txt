@@ -1,0 +1,6 @@
+- section-10.1.2-5: 
+   The From header field is rarely sent by non-robotic user agents.
+   A user agent <bcp14>SHOULD NOT</bcp14> send a From header field without explicit
+   configuration by the user, since that might conflict with the user's
+   privacy interests or their site's security policy.
+

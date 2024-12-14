@@ -1,0 +1,5 @@
+- section-10.1.1-17: 
+   Upon receiving an HTTP/1.1 (or later) request that has a method, target URI,
+   and complete header section that contains a 100-continue expectation and
+   indicates a request content will follow, a proxy <bcp14>MUST</bcp14> either:
+

@@ -1,0 +1,9 @@
+- section-15.5.2-1: 
+   The 401 (Unauthorized) status code indicates that the
+   request has not been applied because it lacks valid authentication
+   credentials for the target resource.
+   The server generating a 401 response <bcp14>MUST</bcp14> send a
+   <xref target="field.www-authenticate" format="none" sectionFormat="of" derivedContent="">WWW-Authenticate</xref> header field
+   (<xref target="field.www-authenticate" format="default" sectionFormat="of" derivedContent="Section 11.6.1"/>)
+   containing at least one challenge applicable to the target resource.
+

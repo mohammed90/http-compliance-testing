@@ -1,0 +1,11 @@
+- section-6-6: 
+   Messages are intended to be "self-descriptive":
+   everything a recipient needs to know about the message can be determined by
+   looking at the message itself, after decoding or reconstituting parts that
+   have been compressed or elided in transit, without requiring an
+   understanding of the sender's current application state (established via
+   prior messages). However, a client <bcp14>MUST</bcp14> retain knowledge of the request when
+   parsing, interpreting, or caching a corresponding response. For example,
+   responses to the <xref target="HEAD" format="none" sectionFormat="of" derivedContent="">HEAD</xref> method look just like the beginning of a
+   response to <xref target="GET" format="none" sectionFormat="of" derivedContent="">GET</xref> but cannot be parsed in the same manner.
+

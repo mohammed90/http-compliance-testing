@@ -1,0 +1,6 @@
+- section-5.3-2: 
+   The order in which field lines with the
+   same name are received is therefore significant to the interpretation of
+   the field value; a proxy <bcp14>MUST NOT</bcp14> change the order of these field line
+   values when forwarding a message.
+

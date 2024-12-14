@@ -1,0 +1,8 @@
+- section-3.8-1: 
+   A "cache" is a local store of previous response messages and the
+   subsystem that controls its message storage, retrieval, and deletion.
+   A cache stores cacheable responses in order to reduce the response
+   time and network bandwidth consumption on future, equivalent
+   requests. Any client or server <bcp14>MAY</bcp14> employ a cache, though a cache
+   cannot be used while acting as a tunnel.
+

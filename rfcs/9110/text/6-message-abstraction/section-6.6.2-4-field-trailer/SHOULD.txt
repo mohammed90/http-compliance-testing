@@ -1,0 +1,6 @@
+- section-6.6.2-4: 
+   A sender that intends to generate one or more trailer fields in a message
+   <bcp14>SHOULD</bcp14> generate a <xref target="field.trailer" format="none" sectionFormat="of" derivedContent="">Trailer</xref> header field in the header
+   section of that message to indicate which fields might be present in the
+   trailers.
+

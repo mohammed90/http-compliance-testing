@@ -1,0 +1,7 @@
+- section-15.4.3-2: 
+   The server <bcp14>SHOULD</bcp14> generate a <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field in the
+   response containing a URI reference for the different URI.
+   The user agent <bcp14>MAY</bcp14> use the Location field value for automatic redirection.
+   The server's response content usually contains a short hypertext note with
+   a hyperlink to the different URI(s).
+

@@ -1,0 +1,8 @@
+- section-7.4-3: 
+   Unless the connection is from a trusted gateway,
+   an origin server <bcp14>MUST</bcp14> reject a request if any scheme-specific requirements
+   for the target URI are not met. In particular,
+   a request for an "https" resource <bcp14>MUST</bcp14> be rejected unless it has been
+   received over a connection that has been secured via a certificate
+   valid for that target URI's origin, as defined by <xref target="https.uri" format="default" sectionFormat="of" derivedContent="Section 4.2.2"/>.
+

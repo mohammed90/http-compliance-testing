@@ -1,0 +1,8 @@
+- section-14.1.2-13: 
+   In the byte-range syntax, <xref target="rule.int-range" format="none" sectionFormat="of" derivedContent="">first-pos</xref>,
+   <xref target="rule.int-range" format="none" sectionFormat="of" derivedContent="">last-pos</xref>, and <xref target="rule.suffix-range" format="none" sectionFormat="of" derivedContent="">suffix-length</xref> are
+   expressed as decimal number of octets. Since there is no predefined limit
+   to the length of content, recipients <bcp14>MUST</bcp14> anticipate potentially
+   large decimal numerals and prevent parsing errors due to integer conversion
+   overflows.
+

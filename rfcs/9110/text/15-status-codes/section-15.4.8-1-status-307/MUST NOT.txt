@@ -1,0 +1,8 @@
+- section-15.4.8-1: 
+   The 307 (Temporary Redirect) status code indicates that the
+   <xref target="target.resource" format="none" sectionFormat="of" derivedContent="">target resource</xref> resides temporarily under a different URI
+   and the user agent <bcp14>MUST NOT</bcp14> change the request method if it performs an
+   automatic redirection to that URI.
+   Since the redirection can change over time, the client ought to continue
+   using the original target URI for future requests.
+

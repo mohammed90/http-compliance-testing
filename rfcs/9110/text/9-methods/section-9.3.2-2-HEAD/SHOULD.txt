@@ -1,0 +1,14 @@
+- section-9.3.2-2: 
+   The server <bcp14>SHOULD</bcp14> send the same header fields in response to a HEAD
+   request as it would have sent if the request method had been GET.
+   However, a server <bcp14>MAY</bcp14> omit header fields for which a value is determined
+   only while generating the content. For example, some servers buffer a
+   dynamic response to GET until a minimum amount of data is generated so
+   that they can more efficiently delimit small responses or make late
+   decisions with regard to content selection. Such a response to GET might
+   contain <xref target="field.content-length" format="none" sectionFormat="of" derivedContent="">Content-Length</xref> and <xref target="field.vary" format="none" sectionFormat="of" derivedContent="">Vary</xref> fields, for
+   example, that are not generated within a HEAD response. These minor
+   inconsistencies are considered preferable to generating and discarding the
+   content for a HEAD request, since HEAD is usually requested for the
+   sake of efficiency.
+

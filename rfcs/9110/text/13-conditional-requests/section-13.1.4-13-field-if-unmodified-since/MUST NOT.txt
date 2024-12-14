@@ -1,0 +1,13 @@
+- section-13.1.4-13: 
+   An origin server that evaluates an If-Unmodified-Since condition <bcp14>MUST NOT</bcp14>
+   perform the requested method if the condition evaluates to false.
+   Instead, the origin server <bcp14>MAY</bcp14> indicate that the conditional request
+   failed by responding with a <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref>
+   status code. Alternatively, if the request is a state-changing operation
+   that appears to have already been applied to the selected representation,
+   the origin server <bcp14>MAY</bcp14> respond with a <xref target="status.2xx" format="none" sectionFormat="of" derivedContent="">2xx (Successful)</xref>
+   status code
+   (i.e., the change requested by the user agent has already succeeded, but
+   the user agent might not be aware of it, perhaps because the prior response
+   was lost or an equivalent change was made by some other user agent).
+

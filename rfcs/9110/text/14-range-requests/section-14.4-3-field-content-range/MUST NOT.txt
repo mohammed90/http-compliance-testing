@@ -1,0 +1,7 @@
+- section-14.4-3: 
+   If a <xref target="status.206" format="none" sectionFormat="of" derivedContent="">206 (Partial Content)</xref> response contains a
+   <xref target="field.content-range" format="none" sectionFormat="of" derivedContent="">Content-Range</xref> header field with a <xref target="range.units" format="none" sectionFormat="of" derivedContent="">range unit</xref>
+   (<xref target="range.units" format="default" sectionFormat="of" derivedContent="Section 14.1"/>) that the recipient does not understand, the
+   recipient <bcp14>MUST NOT</bcp14> attempt to recombine it with a stored representation.
+   A proxy that receives such a message <bcp14>SHOULD</bcp14> forward it downstream.
+

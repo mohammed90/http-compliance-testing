@@ -1,0 +1,9 @@
+- section-12.5.5-4: 
+   A list containing the member "*" signals that other aspects of the
+   request might have played a role in selecting the response representation,
+   possibly including aspects outside the message syntax (e.g., the
+   client's network address).
+   A recipient will not be able to determine whether this response is
+   appropriate for a later request without forwarding the request to the
+   origin server. A proxy <bcp14>MUST NOT</bcp14> generate "*" in a Vary field value.
+

@@ -1,0 +1,9 @@
+- section-8.3-5: 
+   A sender that generates a message containing content <bcp14>SHOULD</bcp14>
+   generate a Content-Type header field in that message unless the intended
+   media type of the enclosed representation is unknown to the sender.
+   If a Content-Type header field is not present, the recipient <bcp14>MAY</bcp14> either
+   assume a media type of
+   "application/octet-stream" (<xref target="RFC2046" sectionFormat="comma" section="4.5.1" format="default" derivedLink="https://rfc-editor.org/rfc/rfc2046#section-4.5.1" derivedContent="RFC2046"/>)
+   or examine the data to determine its type.
+

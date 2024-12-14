@@ -1,0 +1,5 @@
+- section-4.2.4-3: 
+   A sender <bcp14>MUST NOT</bcp14> generate the userinfo subcomponent (and its "@"
+   delimiter) when an "http" or "https" URI reference is generated within a
+   message as a target URI or field value.
+

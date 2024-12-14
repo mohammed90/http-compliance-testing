@@ -1,0 +1,8 @@
+- section-13.1.2-11: 
+   An origin server that evaluates an If-None-Match condition <bcp14>MUST NOT</bcp14>
+   perform the requested method if the condition evaluates to false; instead,
+   the origin server <bcp14>MUST</bcp14> respond with either
+   a) the <xref target="status.304" format="none" sectionFormat="of" derivedContent="">304 (Not Modified)</xref> status code if the request method
+   is GET or HEAD or b) the <xref target="status.412" format="none" sectionFormat="of" derivedContent="">412 (Precondition Failed)</xref> status
+   code for all other request methods.
+

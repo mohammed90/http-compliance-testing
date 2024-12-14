@@ -1,0 +1,7 @@
+- section-14.4-4: 
+   Content-Range might also be sent as a request modifier to request a
+   partial PUT, as described in <xref target="partial.PUT" format="default" sectionFormat="of" derivedContent="Section 14.5"/>, based on private
+   agreements between client and origin server.
+   A server <bcp14>MUST</bcp14> ignore a Content-Range header field received in a request
+   with a method for which Content-Range support is not defined.
+

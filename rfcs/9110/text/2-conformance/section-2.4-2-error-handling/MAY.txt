@@ -1,0 +1,11 @@
+- section-2.4-2: 
+   Unless noted otherwise, a recipient <bcp14>MAY</bcp14> attempt to recover a usable
+   protocol element from an invalid construct.  HTTP does not define
+   specific error handling mechanisms except when they have a direct impact
+   on security, since different applications of the protocol require
+   different error handling strategies.  For example, a Web browser might
+   wish to transparently recover from a response where the
+   <xref target="field.location" format="none" sectionFormat="of" derivedContent="">Location</xref> header field doesn't parse according to the ABNF,
+   whereas a systems control client might consider any form of error recovery
+   to be dangerous.
+

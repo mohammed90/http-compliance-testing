@@ -1,0 +1,5 @@
+- section-7.6.3-11: 
+   An intermediary <bcp14>MAY</bcp14> combine an ordered subsequence of Via header
+   field list members into a single member if the entries have identical
+   received-protocol values. For example,
+
