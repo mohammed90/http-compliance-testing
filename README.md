@@ -4,9 +4,13 @@ HTTP Compliance Test Suite
 
 This repository aims to contain the input/output data comprising the HTTP compliance test suite. It also contains a simplistic script to extract the rules from the XML.
 
+## Background
+
+This project is based on the two conversations, one took place on the HTTP Working Group mailing list and the other on the HTTP Workshop. The blog post [Towards Validated HTTP Implementation](https://www.caffeinatedwonders.com/2024/12/18/towards-validated-http-implementation/) summarizes both discussions and gives a high-level overview of the project.
+
 ## RFC Requirement -> Log Level Mapping
 
-Test suite execution engines should map the requirements violations to log levels and results as follows:
+Test suite execution engines (TBD: To Be Developed) should map the requirements violations to log levels and results as follows:
 
 | Requirement     | Log Level |
 |-----------------|-----------|
