@@ -1,5 +1,5 @@
 
-HTTP Compliance Test Suite
+HTTP Compliance Testing
 ===========================
 
 This repository aims to contain the input/output data comprising the HTTP compliance test suite. It also contains a simplistic script to extract the rules from the XML.
